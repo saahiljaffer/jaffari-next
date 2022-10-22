@@ -2,195 +2,43 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 
 import moment from 'moment';
 import momentHijri from 'moment-hijri';
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 
 const events = [
   {
     id: 0,
-    title: 'All Day Event very long title',
-    description: 'All day - No end time',
-    allDay: true,
-    start: new Date(2015, 3, 0),
-    end: new Date(2015, 3, 1),
+    title: 'Thursday Night Program',
+    start: new Date(2022, 9, 27, 19, 15, 0, 0),
+    end: new Date(2022, 9, 27, 22, 30, 0, 0),
+    desc: '7:15pm – Salat, Ziarat E Warith, Sura Yasin, Dua Kumail, Majlis by Syed Asad Jafry and Ziarat. The program will be relayed online at jaffari.org/live.',
   },
   {
     id: 1,
-    title: 'Long Event',
-    description: 'All day - No end time',
-    start: new Date(2015, 3, 7),
-    end: new Date(2015, 3, 10),
+    title: 'Jumuah',
+    start: new Date(2022, 9, 28, 12, 30, 0, 0),
+    end: new Date(2022, 9, 28, 14, 30, 0, 0),
+    desc: '12:30pm – Du’ā-e-Nudba. 1:02pm – Jumu’ah Salāt led by Maulana Sayyid Muhammad Rizvi,  followed by Friday Ziyārat.The program will be relayed online at jaffari.org/live.',
   },
-
   {
     id: 2,
-    title: 'DTS STARTS',
-    description: 'All day - No end time',
-    start: new Date(2016, 2, 13, 0, 0, 0),
-    end: new Date(2016, 2, 20, 0, 0, 0),
+    title: 'Thursday Night Program',
+    start: new Date(2022, 10, 3, 19, 15, 0, 0),
+    end: new Date(2022, 10, 3, 22, 30, 0, 0),
+    desc: '7:15pm – Salat, Ziarat E Warith, Sura Yasin, Dua Kumail, Majlis by Syed Asad Jafry and Ziarat. The program will be relayed online at jaffari.org/live.',
   },
-
   {
     id: 3,
-    title: 'DTS ENDS',
-    description: 'All day - No end time',
-    start: new Date(2016, 10, 6, 0, 0, 0),
-    end: new Date(2016, 10, 13, 0, 0, 0),
-  },
-
-  {
-    id: 4,
-    title: 'Some Event',
-    start: new Date(2015, 3, 9, 0, 0, 0),
-    end: new Date(2015, 3, 10, 0, 0, 0),
-  },
-  {
-    id: 5,
-    title: 'Conference',
-    start: new Date(2015, 3, 11),
-    end: new Date(2015, 3, 13),
-    desc: 'Big conference for important people',
-  },
-  {
-    id: 6,
-    title: 'Meeting',
-    start: new Date(2015, 3, 12, 10, 30, 0, 0),
-    end: new Date(2015, 3, 12, 12, 30, 0, 0),
-    desc: 'Pre-meeting meeting, to prepare for the meeting',
-  },
-  {
-    id: 7,
-    title: 'Lunch',
-    start: new Date(2015, 3, 12, 12, 0, 0, 0),
-    end: new Date(2015, 3, 12, 13, 0, 0, 0),
-    desc: 'Power lunch',
-  },
-  {
-    id: 8,
-    title: 'Meeting',
-    start: new Date(2015, 3, 12, 14, 0, 0, 0),
-    end: new Date(2015, 3, 12, 15, 0, 0, 0),
-  },
-  {
-    id: 9,
-    title: 'Happy Hour',
-    start: new Date(2015, 3, 12, 17, 0, 0, 0),
-    end: new Date(2015, 3, 12, 17, 30, 0, 0),
-    desc: 'Most important meal of the day',
-  },
-  {
-    id: 10,
-    title: 'Dinner',
-    start: new Date(2015, 3, 12, 20, 0, 0, 0),
-    end: new Date(2015, 3, 12, 21, 0, 0, 0),
-  },
-  {
-    id: 11,
-    title: 'Planning Meeting with Paige',
-    start: new Date(2015, 3, 13, 8, 0, 0),
-    end: new Date(2015, 3, 13, 10, 30, 0),
-  },
-  {
-    id: 11.1,
-    title: 'Inconvenient Conference Call',
-    start: new Date(2015, 3, 13, 9, 30, 0),
-    end: new Date(2015, 3, 13, 12, 0, 0),
-  },
-  {
-    id: 11.2,
-    title: "Project Kickoff - Lou's Shoes",
-    start: new Date(2015, 3, 13, 11, 30, 0),
-    end: new Date(2015, 3, 13, 14, 0, 0),
-  },
-  {
-    id: 11.3,
-    title: 'Quote Follow-up - Tea by Tina',
-    start: new Date(2015, 3, 13, 15, 30, 0),
-    end: new Date(2015, 3, 13, 16, 0, 0),
-  },
-  {
-    id: 12,
-    title: 'Late Night Event',
-    start: new Date(2015, 3, 17, 19, 30, 0),
-    end: new Date(2015, 3, 18, 2, 0, 0),
-  },
-  {
-    id: 12.5,
-    title: 'Late Same Night Event',
-    start: new Date(2015, 3, 17, 19, 30, 0),
-    end: new Date(2015, 3, 17, 23, 30, 0),
-  },
-  {
-    id: 13,
-    title: 'Multi-day Event',
-    start: new Date(2015, 3, 20, 19, 30, 0),
-    end: new Date(2015, 3, 22, 2, 0, 0),
-  },
-  {
-    id: 14,
-    title: 'Today',
-    start: new Date(new Date().setHours(new Date().getHours() - 3)),
-    end: new Date(new Date().setHours(new Date().getHours() + 3)),
-  },
-  {
-    id: 15,
-    title: 'Point in Time Event',
-    start: new Date(),
-    end: new Date(),
-  },
-  {
-    id: 16,
-    title: 'Video Record',
-    start: new Date(2015, 3, 14, 15, 30, 0),
-    end: new Date(2015, 3, 14, 19, 0, 0),
-  },
-  {
-    id: 17,
-    title: 'Dutch Song Producing',
-    start: new Date(2015, 3, 14, 16, 30, 0),
-    end: new Date(2015, 3, 14, 20, 0, 0),
-  },
-  {
-    id: 18,
-    title: 'Itaewon Halloween Meeting',
-    start: new Date(2015, 3, 14, 16, 30, 0),
-    end: new Date(2015, 3, 14, 17, 30, 0),
-  },
-  {
-    id: 19,
-    title: 'Online Coding Test',
-    start: new Date(2015, 3, 14, 17, 30, 0),
-    end: new Date(2015, 3, 14, 20, 30, 0),
-  },
-  {
-    id: 20,
-    title: 'An overlapped Event',
-    start: new Date(2015, 3, 14, 17, 0, 0),
-    end: new Date(2015, 3, 14, 18, 30, 0),
-  },
-  {
-    id: 21,
-    title: 'Phone Interview',
-    start: new Date(2015, 3, 14, 17, 0, 0),
-    end: new Date(2015, 3, 14, 18, 30, 0),
-  },
-  {
-    id: 22,
-    title: 'Cooking Class',
-    start: new Date(2015, 3, 14, 17, 30, 0),
-    end: new Date(2015, 3, 14, 19, 0, 0),
-  },
-  {
-    id: 23,
-    title: 'Go to the gym',
-    start: new Date(2015, 3, 14, 18, 30, 0),
-    end: new Date(2015, 3, 14, 20, 0, 0),
+    title: 'Wiladat of Imam Hassan Askari',
+    start: new Date(2022, 10, 4, 19, 15, 0, 0),
+    end: new Date(2022, 10, 4, 22, 30, 0, 0),
+    desc: '7:15pm – Salat, Ziarat E Warith, Sura Yasin, Dua Kumail, Majlis by Syed Asad Jafry and Ziarat. The program will be relayed online at jaffari.org/live.',
   },
 ];
 
 const mLocalizer = momentLocalizer(moment);
-const hijriLocalizer = momentLocalizer(momentHijri);
-
+// const hijriLocalizer = momentLocalizer(momentHijri);
+momentHijri.locale('en');
 // const ColoredDateCellWrapper = ({ children }: { children: any }) =>
 //   React.cloneElement(React.Children.only(children), {
 //     style: {
@@ -198,57 +46,104 @@ const hijriLocalizer = momentLocalizer(momentHijri);
 //     },
 //   });
 
-// function MyAgendaEvent({ event }: { event: any }) {
-//   return <p>{event.description}</p>;
-// }
+function AgendaDate({ day, label }: { day: Date; label: string }) {
+  return (
+    <>
+      <p>{label}</p>
+      <p>{momentHijri(day).format('iDo iMMM')}</p>
+    </>
+  );
+}
+
+function AgendaTime({ event }: { event: any }) {
+  const startTime = new Date(event.start);
+  const endTime = new Date(event.end);
+  return (
+    <>
+      <p>
+        {startTime.toLocaleString('en-US', {
+          hour: 'numeric',
+          minute: 'numeric',
+          hour12: true,
+        })}
+      </p>
+      <p>
+        {endTime.toLocaleString('en-US', {
+          hour: 'numeric',
+          minute: 'numeric',
+          hour12: true,
+        })}
+      </p>
+    </>
+  );
+}
+
+function AgendaEvent({ event }: { event: any }) {
+  const [showDescription, setShowDescription] = useState(false);
+
+  return (
+    <>
+      <span
+        onClick={() => {
+          setShowDescription(!showDescription);
+        }}
+        className="indicator-item indicator-start badge badge-secondary bg-slate-900 border-slate-900"
+      >
+        {/* {showDescription ? '-' : '+'} */}
+      </span>
+      <p className="ml-4 w-full h-full">
+        {showDescription ? event.desc : event.title}
+      </p>
+    </>
+  );
+}
 
 /**
  * We are defaulting the localizer here because we are using this same
  * example on the main 'About' page in Storybook
  */
 function UpcomingEvents({ localizer = mLocalizer, ...props }) {
-  // const { components } = useMemo(
-  //   () => ({
-  //     components: {
-  //       timeSlotWrapper: ColoredDateCellWrapper,
-  //       agenda: { event: MyAgendaEvent },
-  //     },
-  //     defaultDate: new Date(2015, 3, 1),
-  //   }),
-  //   []
-  // );
+  const [components, setComponents] = useState({});
+
+  useEffect(() => {
+    setComponents({
+      event: AgendaEvent,
+      agenda: { date: AgendaDate, time: AgendaTime },
+    });
+  }, []);
+
   const formats = useMemo(
     () => ({
       dayFormat: 'ddd',
       weekdayFormat: 'ddd',
-      dateFormat: (date: any, culture: any) =>
-        hijriLocalizer.format(date, 'iD/D', culture),
+      // dateFormat: (date: any, culture: any) =>
+      //   hijriLocalizer.format(date, 'iD/D', culture),
       yearFormat: 'iYYYY',
       monthHeaderFormat: 'iMMMM iYYYY / MMMM YYYY',
-      agendaDateFormat: (date: any, culture: any) =>
-        hijriLocalizer.format(date, 'ddd MMM DD / iMMM iDD', culture),
-      agendaHeaderFormat: (
-        { start, end }: { start: any; end: any },
-        culture: any
-      ) =>
-        `${hijriLocalizer.format(
-          start,
-          'DD/MM/YYYY / iDD/iMM/iYYYY',
-          culture
-        )} – ${hijriLocalizer.format(
-          end,
-          'DD/MM/YYYY / iDD/iMM/iYYYY',
-          culture
-        )}`,
+      // agendaDateFormat: (date: any, culture: any) =>
+      //   hijriLocalizer.format(date, 'ddd MMM DD / iMMM iDD', culture),
+      //   agendaHeaderFormat: (
+      //     { start, end }: { start: any; end: any },
+      //     culture: any
+      //   ) =>
+      //     `${hijriLocalizer.format(
+      //       start,
+      //       'DD/MM/YYYY / iDD/iMM/iYYYY',
+      //       culture
+      //     )} – ${hijriLocalizer.format(
+      //       end,
+      //       'DD/MM/YYYY / iDD/iMM/iYYYY',
+      //       culture
+      //     )}`,
     }),
     []
   );
 
   return (
-    <div>
-      <div className="height600" style={{ height: '300px' }} {...props}>
+    <div className="flex justify-center content-center text-black m-4">
+      <div className="w-full max-w-2xl" style={{ height: '300px' }} {...props}>
         <Calendar
-          // components={components}
+          components={components}
           events={events}
           localizer={localizer}
           showMultiDayTimes
