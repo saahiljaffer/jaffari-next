@@ -21,20 +21,15 @@ a:hover {
 }
 
 .rbc-agenda-time-cell {
-  border-right: 1px solid #e2e8f0;
+  width: 100px;
+  border-right: 1px solid #ddd;
+}
+
+.rbc-agenda-date-cell {
+  width: 100px;
 }
 
 .rbc-agenda-event-cell {
   border-left: 0 !important;
-  flex: 1 0 0px !important;
-  @apply  indicator
-}
-
-.rbc-agenda-table {
-  @apply flex
-}
-
-.rbc-agenda-table *{
-  border-bottom: 0 !important;
-  border-top: 0 !important;
+  @apply indicator
 }
