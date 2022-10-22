@@ -91,7 +91,7 @@ function AgendaEvent({ event }: { event: any }) {
       >
         {/* {showDescription ? '-' : '+'} */}
       </span>
-      <p className="ml-4 w-full h-full">
+      <p className="w-full h-full">
         {showDescription ? event.desc : event.title}
       </p>
     </>
