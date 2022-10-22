@@ -82,7 +82,12 @@ function AgendaEvent({ event }: { event: any }) {
   const [showDescription, setShowDescription] = useState(false);
 
   return (
-    <>
+    <div
+      className="w-full "
+      onClick={() => {
+        setShowDescription(!showDescription);
+      }}
+    >
       <span
         onClick={() => {
           setShowDescription(!showDescription);
@@ -94,7 +99,7 @@ function AgendaEvent({ event }: { event: any }) {
       <p className="w-full h-full">
         {showDescription ? event.desc : event.title}
       </p>
-    </>
+    </div>
   );
 }
 
