@@ -1,4 +1,4 @@
-const DonateBar = () => {
+export const DonateBar = () => {
   const categories = [
     { name: 'Sadaqa', icon: '6:14am' },
     { name: 'Pakistan', icon: '7:39am' },
@@ -21,5 +21,3 @@ const DonateBar = () => {
     </div>
   );
 };
-
-export { DonateBar };

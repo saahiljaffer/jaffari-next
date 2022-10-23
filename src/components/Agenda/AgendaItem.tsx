@@ -7,7 +7,7 @@ momentHijri.locale('en');
  * We are defaulting the localizer here because we are using this same
  * example on the main 'About' page in Storybook
  */
-function AgendaItem({
+export const AgendaItem = ({
   start,
   title,
   desc,
@@ -17,7 +17,7 @@ function AgendaItem({
   title: string;
   desc: string[];
   live: boolean;
-}) {
+}) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -27,8 +27,40 @@ function AgendaItem({
           onClick={() => {
             setIsExpanded(!isExpanded);
           }}
-          className="indicator-item indicator-start bg-slate-900 border-slate-900 badge badge-secondary"
-        ></span>
+          className="indicator-item indicator-start px-1 py-2.5 bg-slate-900 border-slate-900 badge badge-secondary"
+        >
+          {isExpanded ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-3 h-3"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.5 15.75l7.5-7.5 7.5 7.5"
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-3 h-3"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
+          )}
+        </span>
         <p className="text-left ml-1">
           {start.toLocaleString('en-GB', {
             day: '2-digit',
@@ -78,6 +110,4 @@ function AgendaItem({
       )}
     </>
   );
-}
-
-export default AgendaItem;
+};

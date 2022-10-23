@@ -1,6 +1,6 @@
 import momentHijri from 'moment-hijri';
 
-import AgendaItem from './AgendaItem';
+import { AgendaItem } from './AgendaItem';
 
 const events = [
   {
@@ -75,4 +75,4 @@ function Agenda() {
   );
 }
 
-export default Agenda;
+export { Agenda };

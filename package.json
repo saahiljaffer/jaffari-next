@@ -26,7 +26,8 @@
     "next-seo": "^5.5.0",
     "react": "^18.2.0",
     "react-big-calendar": "^1.5.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "swiper": "^8.4.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",

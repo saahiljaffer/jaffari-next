@@ -1,4 +1,4 @@
-const PrayerTimes = () => {
+export const PrayerTimes = () => {
   const prayers = [
     { name: 'fajr', time: '6:14AM' },
     { name: 'sunrise', time: '7:39AM' },
@@ -18,5 +18,3 @@ const PrayerTimes = () => {
     </div>
   );
 };
-
-export { PrayerTimes };

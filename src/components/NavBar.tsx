@@ -1,4 +1,4 @@
-const NavBar = () => (
+export const NavBar = () => (
   <div className="navbar p-0">
     <div className="navbar-start ml-2">
       <a className="btn-ghost btn p-0 text-xl normal-case">
@@ -138,5 +138,3 @@ const NavBar = () => (
     </div>
   </div>
 );
-
-export { NavBar };

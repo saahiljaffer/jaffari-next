@@ -1,4 +1,5 @@
-import Agenda from '@/components/Agenda/Agenda';
+import { Agenda } from '@/components/Agenda/Agenda';
+import { Announcements } from '@/components/Announcements';
 import { DonateBar } from '@/components/DonateBar';
 import { NavBar } from '@/components/NavBar';
 import { PrayerTimes } from '@/components/PrayerBar';
@@ -10,6 +11,7 @@ const Index = () => {
       <PrayerTimes />
       <DonateBar />
       <Agenda />
+      <Announcements />
     </div>
   );
 };
