@@ -1,11 +1,11 @@
 const NavBar = () => (
   <div className="navbar">
     <div className="navbar-start">
-      <a className="btn-ghost btn text-xl normal-case">
+      <a className="btn-ghost btn p-0 text-xl normal-case">
         <img alt="" width="48" src="/assets/images/ISIJ-Logo-Blue.png" />
       </a>
     </div>
-    <div className="navbar-center flex flex-col text-sm lg:hidden">
+    <div className="navbar-center flex flex-col text-slate-900 text-sm lg:hidden">
       <p>21st October 2022</p>
       <p>24th Rabi Al Awwal 1444</p>
     </div>
@@ -54,8 +54,22 @@ const NavBar = () => (
       <li className="hidden lg:flex">
         <a className="btn text-white">Watch Live</a>
       </li>
+
+      <a
+        href="https://youtube.com/islamicentre/live"
+        target="_blank"
+        className="text-white hover:border-0 lg:hidden"
+        rel="noreferrer"
+      >
+        <img
+          width="32px"
+          src="https://www.vectorlogo.zone/logos/youtube/youtube-icon.svg"
+          alt="YouTube"
+        />
+      </a>
+
       <div className="dropdown-end dropdown">
-        <label tabIndex={0} className="btn-ghost btn lg:hidden">
+        <label tabIndex={0} className="btn-ghost btn px-1.5 lg:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"

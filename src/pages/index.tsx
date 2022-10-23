@@ -1,7 +1,7 @@
+import Agenda from '@/components/Agenda/Agenda';
 import { DonateBar } from '@/components/DonateBar';
 import { NavBar } from '@/components/NavBar';
 import { PrayerTimes } from '@/components/PrayerBar';
-import UpcomingEvents from '@/components/UpcomingEvents';
 
 const Index = () => {
   return (
@@ -9,7 +9,7 @@ const Index = () => {
       <NavBar />
       <PrayerTimes />
       <DonateBar />
-      <UpcomingEvents />
+      <Agenda />
     </div>
   );
 };
