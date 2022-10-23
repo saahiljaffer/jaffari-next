@@ -1,11 +1,15 @@
 const NavBar = () => (
-  <div className="navbar">
-    <div className="navbar-start">
+  <div className="navbar p-0">
+    <div className="navbar-start ml-2">
       <a className="btn-ghost btn p-0 text-xl normal-case">
-        <img alt="" width="48" src="/assets/images/ISIJ-Logo-Blue.png" />
+        <img
+          alt=""
+          className="h-full"
+          src="/assets/images/ISIJ-Logo-Blue.png"
+        />
       </a>
     </div>
-    <div className="navbar-center flex flex-col text-slate-900 text-sm lg:hidden">
+    <div className="navbar-center flex flex-col text-slate-900 lg:hidden">
       <p>21st October 2022</p>
       <p>24th Rabi Al Awwal 1444</p>
     </div>
@@ -50,7 +54,7 @@ const NavBar = () => (
         </li>
       </ul>
     </div>
-    <div className="navbar-end">
+    <div className="navbar-end mr-2">
       <li className="hidden lg:flex">
         <a className="btn text-white">Watch Live</a>
       </li>

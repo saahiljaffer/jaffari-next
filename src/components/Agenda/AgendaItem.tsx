@@ -22,22 +22,21 @@ function AgendaItem({
 
   return (
     <>
-      <div className="text-sm indicator flex-col w-full py-1 px-2 border-[#2a303c] border-l border-b">
+      <div className="indicator flex-col w-full p-1 pr-2 border-[#2a303c] border-l border-b">
         <span
           onClick={() => {
             setIsExpanded(!isExpanded);
           }}
           className="indicator-item indicator-start bg-slate-900 border-slate-900 badge badge-secondary"
         ></span>
-        <p>
+        <p className="text-left ml-1">
           {start.toLocaleString('en-GB', {
             day: '2-digit',
             month: 'short',
           })}
         </p>
-        <p>{momentHijri(start).format('iDD iMMM')}</p>
       </div>
-      <div className="text-sm flex flex-col py-1 px-2 border-[#2a303c] border-l border-b">
+      <div className="text-left flex flex-col p-1 pr-2 border-[#2a303c] border-l border-b">
         <p>
           7:15 PM
           {/* {start.toLocaleString("en-GB", {
@@ -46,24 +45,35 @@ function AgendaItem({
                     hour12: true,
                   })} */}
         </p>
-        <p>
-          10:30 PM
-          {/* {end.toLocaleString("en-GB", {
-                    hour: "numeric",
-                    minute: "numeric",
-                    hour12: true,
-                  })} */}
-        </p>
       </div>
-      <div className="col-span-2 flex flex-col justify-center py-1 px-2 border-[#2a303c] border-x border-b">
-        <p className="text-left text-sm">{title}</p>
+      <div className="flex flex-col justify-center p-1 border-[#2a303c] border-x border-b">
+        <p className="text-left">{title}</p>
       </div>
       {isExpanded && (
-        <div className="col-span-4 text-left text-sm p-2 border-[#2a303c] border-x border-b">
+        <div className="text-left col-span-3 p-1 pl-2 border-[#2a303c] border-x border-b">
           {desc.map((str: string) => (
-            <p key={str}>{str}</p>
+            <p className="mb-1" key={str}>
+              {str}
+            </p>
           ))}
-          {live && <a href="/live">This event will be live streamed</a>}
+          <p className="mb-1">
+            <span className="font-semibold">Islamic Date: </span>
+            {momentHijri(start).format('iDD iMMM')}
+          </p>
+          <p className="mb-1">
+            <span className="font-semibold">Estimated End Time: </span>
+            10:30 PM
+          </p>
+          {live && (
+            <p className="mb-1">
+              <span className="font-semibold">Live Stream: </span>
+              <a href="/live">Click Here</a>
+            </p>
+          )}
+          <p className="mb-1">
+            <span className="font-semibold">Category: </span>
+            Jamaat Program
+          </p>
         </div>
       )}
     </>

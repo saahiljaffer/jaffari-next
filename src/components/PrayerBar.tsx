@@ -1,9 +1,9 @@
 const PrayerTimes = () => {
   const prayers = [
-    { name: 'fajr', time: '6:14am' },
-    { name: 'sunrise', time: '7:39am' },
-    { name: 'zuhr', time: '1:02pm' },
-    { name: 'maghrib', time: '6:40pm' },
+    { name: 'fajr', time: '6:14AM' },
+    { name: 'sunrise', time: '7:39AM' },
+    { name: 'zuhr', time: '1:02PM' },
+    { name: 'maghrib', time: '6:40PM' },
   ];
   return (
     <div className="flex justify-center bg-slate-900 py-2 text-white">

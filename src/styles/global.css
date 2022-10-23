@@ -20,16 +20,8 @@ a:hover {
   @apply my-6;
 }
 
-.rbc-agenda-time-cell {
-  width: 100px;
-  border-right: 1px solid #ddd;
-}
-
-.rbc-agenda-date-cell {
-  width: 100px;
-}
-
-.rbc-agenda-event-cell {
-  border-left: 0 !important;
-  @apply indicator
+.grid-table {
+  grid-template-columns: max-content max-content 1fr;
+  /* grid-auto-columns: 1fr; */
+  /* grid-auto-flow: column; */
 }
