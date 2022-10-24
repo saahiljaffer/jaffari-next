@@ -1,11 +1,9 @@
-import { Agenda } from '@/components/Agenda/Agenda';
-import { Announcements } from '@/components/Announcements';
-import { DonateBar } from '@/components/DonateBar';
-import { Engagements } from '@/components/Engagements';
-import { Footer } from '@/components/Footer';
-import { NavBar } from '@/components/NavBar';
-import { Obituaries } from '@/components/Obituaries';
-import { PrayerBar } from '@/components/PrayerBar';
+import { Announcements } from "@/components/Announcements";
+import { DonateBar } from "@/components/DonateBar";
+import { Footer } from "@/components/Footer";
+import { NavBar } from "@/components/NavBar";
+import { PrayerBar } from "@/components/PrayerBar";
+import { Agenda } from "@/components/UpcomingEvents";
 
 const Index = () => {
   return (
@@ -15,8 +13,6 @@ const Index = () => {
       <DonateBar />
       <Agenda />
       <Announcements />
-      <Engagements />
-      <Obituaries />
       <Footer />
     </div>
   );

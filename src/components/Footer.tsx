@@ -1,15 +1,16 @@
 export const Footer = () => (
-  <footer className="footer footer-center p-10 bg-slate-900 text-primary-content">
+  <footer className="footer footer-center bg-slate-900 p-10 text-primary-content">
     <div>
       <img
         src="/assets/images/ISIJ-Logo-White.png"
         alt="logo"
         className="h-20"
       />
-      <p className="font-bold">Jaffari Community Centre</p>
-      <p>9000 Bathurst Street </p>
-      <p>Thornhill, Ontario</p>
-      <p>L4J 8A7</p>
+      <div className="gap-0">
+        <p>9000 Bathurst Street</p>
+        <p>Thornhill, Ontario</p>
+      </div>
+      <p>905-695-9786</p>
     </div>
     <div>
       <div className="grid grid-flow-col gap-4 text-white">

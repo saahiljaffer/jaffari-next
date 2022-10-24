@@ -1,6 +1,6 @@
 export const NavBar = () => (
-  <div className="navbar p-0">
-    <div className="navbar-start ml-2">
+  <div className="navbar">
+    <div className="navbar-start">
       <a className="btn-ghost btn p-0 text-xl normal-case">
         <img
           alt=""
@@ -8,10 +8,6 @@ export const NavBar = () => (
           src="/assets/images/ISIJ-Logo-Blue.png"
         />
       </a>
-    </div>
-    <div className="navbar-center flex flex-col text-slate-900 lg:hidden">
-      <p>21st October 2022</p>
-      <p>24th Rabi Al Awwal 1444</p>
     </div>
     <div className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal p-0">
@@ -54,7 +50,7 @@ export const NavBar = () => (
         </li>
       </ul>
     </div>
-    <div className="navbar-end mr-2">
+    <div className="navbar-end">
       <li className="hidden lg:flex">
         <a className="btn text-white">Watch Live</a>
       </li>

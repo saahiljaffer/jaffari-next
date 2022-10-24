@@ -1,12 +1,12 @@
 export const DonateBar = () => {
   const categories = [
-    { name: 'Sadaqa', icon: '6:14am' },
-    { name: 'Pakistan', icon: '7:39am' },
-    { name: 'Maintenance', icon: '1:02pm' },
-    { name: 'Donations', icon: '6:40pm' },
+    { name: "Sadaqa", icon: "6:14am" },
+    { name: "Pakistan", icon: "7:39am" },
+    { name: "Maintenance", icon: "1:02pm" },
+    { name: "Donations", icon: "6:40pm" },
   ];
   return (
-    <div className="flex justify-center bg-[#2a303c] py-2">
+    <div className="flex justify-center bg-zinc-600 py-2">
       <div className="grid max-w-md grid-cols-4">
         {categories.map((category) => (
           // TODO: adding this padding is kinda hacky, but it works for now
