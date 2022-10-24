@@ -11,7 +11,7 @@ export const Event = ({ title, desc }: { title: string; desc: string[] }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="card w-full bg-slate-900 text-white shadow-xl">
+    <div className="card w-full rounded-lg bg-slate-900 text-white shadow-xl">
       <div className="card-body flex flex-col content-center justify-center p-5">
         <div className="flex flex-row justify-between">
           <p className="text-xl font-semibold">{title}</p>
