@@ -47,8 +47,8 @@ export const Announcements = () => {
   ];
 
   return (
-    <>
-      <h2 className="text-black mb-2 font-semibold text-center">
+    <div className="py-10 bg-slate-900">
+      <h2 className="text-white mb-2 font-semibold text-center">
         Announcements
       </h2>
       <div className="w-full flex justify-center content-center p-4">
@@ -74,6 +74,6 @@ export const Announcements = () => {
           ))}
         </Swiper>
       </div>
-    </>
+    </div>
   );
 };

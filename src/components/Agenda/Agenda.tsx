@@ -50,7 +50,7 @@ momentHijri.locale('en');
 
 function Agenda() {
   return (
-    <div className="w-full flex flex-col justify-center place-items-center p-4">
+    <div className="py-10 w-full flex flex-col justify-center place-items-center p-4">
       <h2 className="text-black mb-2 max-w-2xl font-semibold">
         Upcoming Events
       </h2>
