@@ -1,4 +1,4 @@
-export const PrayerTimes = () => {
+export const PrayerBar = () => {
   const prayers = [
     { name: 'fajr', time: '6:14AM' },
     { name: 'sunrise', time: '7:39AM' },

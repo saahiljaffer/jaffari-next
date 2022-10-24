@@ -1,17 +1,23 @@
 import { Agenda } from '@/components/Agenda/Agenda';
 import { Announcements } from '@/components/Announcements';
 import { DonateBar } from '@/components/DonateBar';
+import { Engagements } from '@/components/Engagements';
+import { Footer } from '@/components/Footer';
 import { NavBar } from '@/components/NavBar';
-import { PrayerTimes } from '@/components/PrayerBar';
+import { Obituaries } from '@/components/Obituaries';
+import { PrayerBar } from '@/components/PrayerBar';
 
 const Index = () => {
   return (
     <div className="bg-white">
       <NavBar />
-      <PrayerTimes />
+      <PrayerBar />
       <DonateBar />
       <Agenda />
       <Announcements />
+      <Engagements />
+      <Obituaries />
+      <Footer />
     </div>
   );
 };

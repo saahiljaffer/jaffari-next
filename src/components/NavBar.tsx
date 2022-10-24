@@ -59,19 +59,6 @@ export const NavBar = () => (
         <a className="btn text-white">Watch Live</a>
       </li>
 
-      <a
-        href="https://youtube.com/islamicentre/live"
-        target="_blank"
-        className="text-white hover:border-0 lg:hidden"
-        rel="noreferrer"
-      >
-        <img
-          width="32px"
-          src="https://www.vectorlogo.zone/logos/youtube/youtube-icon.svg"
-          alt="YouTube"
-        />
-      </a>
-
       <div className="dropdown-end dropdown">
         <label tabIndex={0} className="btn-ghost btn px-1.5 lg:hidden">
           <svg
