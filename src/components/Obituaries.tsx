@@ -8,7 +8,7 @@ export const Obituaries = () => {
 
   return (
     <div className="py-10 text-white gap-1 w-full flex justify-center content-center p-4">
-      <div className="max-w-2xl w-full flex flex-col gap-1">
+      <div className="max-w-2xl w-full flex flex-col gap-2">
         <h2 className="text-black mb-2 font-semibold text-center">
           Obituaries
         </h2>

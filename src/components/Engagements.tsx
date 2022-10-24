@@ -8,7 +8,7 @@ export const Engagements = () => {
 
   return (
     <div className="py-10 bg-[#2a303c] text-white gap-1 w-full flex justify-center content-center p-4">
-      <div className="max-w-2xl w-full flex flex-col gap-1">
+      <div className="max-w-2xl w-full flex flex-col gap-2">
         <h2 className="text-white mb-2 font-semibold text-center">
           Engagements
         </h2>
