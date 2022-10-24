@@ -72,7 +72,7 @@ export const Announcements = () => {
           ))}
         </Swiper>
       </div>
-      <div className="card w-72 rounded-xl bg-slate-900 text-neutral-content">
+      <div className="card w-72 rounded-xl bg-slate-900 text-white">
         <div className="card-body items-center text-center">
           <h2 className="card-title">Engagements</h2>
           <div className="my-2">
@@ -87,7 +87,7 @@ export const Announcements = () => {
           </div>
         </div>
       </div>
-      <div className="card w-72 rounded-xl bg-slate-900 text-neutral-content">
+      <div className="card w-72 rounded-xl bg-slate-900 text-white">
         <div className="card-body items-center text-center">
           <h2 className="card-title">Obituaries</h2>
           <p>Marhūm Husein Mohamedtaki Shermohamed</p>
@@ -98,7 +98,7 @@ export const Announcements = () => {
           </div>
         </div>
       </div>
-      <div className="card w-72 rounded-xl bg-slate-900 text-neutral-content">
+      <div className="card w-72 rounded-xl bg-slate-900 text-white">
         <div className="card-body items-center text-center">
           <h2 className="card-title">Dua Shifa</h2>
           <p>John Doe</p>
