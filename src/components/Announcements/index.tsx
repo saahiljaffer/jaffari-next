@@ -46,8 +46,8 @@ export const Announcements = () => {
           />
         ))}
       </div>
-      <button className="btn w-full bg-slate-900 text-white">
-        More Announcements
+      <button className="btn w-full bg-slate-900 text-white hover:bg-zinc-600 hover:text-white">
+        Older Announcements
       </button>
     </div>
   );

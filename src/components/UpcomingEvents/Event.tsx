@@ -56,8 +56,14 @@ export const Event = ({ title, desc }: { title: string; desc: string[] }) => {
         </div>
         <p>Thursday, Oct 27th @ 7:15 PM</p>
 
-        <div className="card-actions justify-end">
-          {isExpanded && <p>{desc[0]}</p>}
+        <div className="card-actions">
+          {isExpanded && (
+            <div className="flex flex-col">
+              {desc.map((item, idx) => (
+                <p key={idx}>{item}</p>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

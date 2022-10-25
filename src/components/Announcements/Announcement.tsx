@@ -19,7 +19,7 @@ export const Announcement = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="card card-compact w-full rounded-md bg-zinc-600 text-white shadow-xl">
+    <div className="card card-compact w-full rounded-md bg-slate-900 text-white shadow-xl">
       <div className="card-body flex flex-col content-center justify-center gap-4">
         <div className="flex flex-row items-center justify-between">
           <p className="card-title text-xl">{title}</p>
@@ -27,7 +27,7 @@ export const Announcement = ({
             onClick={() => {
               setIsExpanded(!isExpanded);
             }}
-            className="btn h-8 min-h-0 w-8  bg-white px-0 text-black hover:bg-slate-900 hover:text-white"
+            className="btn h-8 min-h-0 w-8  bg-white px-0 text-black hover:bg-zinc-600 hover:text-white"
           >
             {isExpanded ? (
               <svg

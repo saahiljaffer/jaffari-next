@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { NavBar } from "@/components/NavBar";
 import { PrayerBar } from "@/components/PrayerBar";
-import { Agenda } from "@/components/UpcomingEvents";
+import { UpcomingEvents } from "@/components/UpcomingEvents";
 
 const Index = () => {
   return (
@@ -15,7 +15,7 @@ const Index = () => {
         <Hero />
         <PrayerBar />
       </div>
-      <Agenda />
+      <UpcomingEvents />
       <Announcements />
       <Footer />
     </div>

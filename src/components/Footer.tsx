@@ -10,7 +10,9 @@ export const Footer = () => (
         <p>9000 Bathurst Street</p>
         <p>Thornhill, Ontario</p>
       </div>
-      <p>905-695-9786</p>
+      <a href="tel:9056959786" className="text-white hover:border-zinc-500">
+        (905) 695-9786
+      </a>
     </div>
     <div>
       <div className="grid grid-flow-col gap-4 text-white">

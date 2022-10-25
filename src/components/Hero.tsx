@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export const Hero = () => {
   return (
     <div className="hero flex-auto bg-zinc-600 py-6 text-white">
@@ -11,21 +9,18 @@ export const Hero = () => {
         />
         <div>
           <h1 className="text-3xl font-bold">Jaffari Community Centre</h1>
-          <p className="py-6">
+          <p className="py-4">
             Situated on the border of Vaughan and Richmond Hill, the Jaffari
             Community Centre is a 100,000 square foot facility that is home to a
             variety of community programs and services.
           </p>
           <div className="flex flex-col justify-center gap-4">
-            <Link href="/donate">
-              <div className="btn bg-slate-900 text-white">Donate Now</div>
-            </Link>
             <div className="grid grid-cols-2 gap-4">
-              <a className="btn-outline btn border-white text-white">
-                Visit JCC
+              <a className="btn bg-slate-900 text-white hover:bg-white hover:text-black">
+                Our Committees
               </a>
-              <a className="btn-outline btn border-white text-white">
-                Committees
+              <a className="btn-outline btn text-white hover:bg-white hover:text-black">
+                Visit Our Centre
               </a>
             </div>
           </div>
