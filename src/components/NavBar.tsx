@@ -1,13 +1,18 @@
+import Link from "next/link";
+
 export const NavBar = () => (
-  <div className="navbar">
+  <div className="navbar bg-slate-900 px-4">
     <div className="navbar-start">
-      <a className="btn-ghost btn p-0 text-xl normal-case">
+      <Link
+        href="/"
+        className="btn-ghost btn p-0 text-xl normal-case hover:cursor-pointer"
+      >
         <img
           alt=""
-          className="h-full"
-          src="/assets/images/ISIJ-Logo-Blue.png"
+          className="h-12 hover:cursor-pointer"
+          src="/assets/images/ISIJ-Logo-White.png"
         />
-      </a>
+      </Link>
     </div>
     <div className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal p-0">

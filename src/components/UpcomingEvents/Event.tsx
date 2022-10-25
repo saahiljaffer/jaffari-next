@@ -19,7 +19,7 @@ export const Event = ({ title, desc }: { title: string; desc: string[] }) => {
             onClick={() => {
               setIsExpanded(!isExpanded);
             }}
-            className="btn h-8 min-h-0 w-8  bg-white px-0 text-black hover:bg-slate-200"
+            className="btn h-8 min-h-0 w-8  bg-white px-0 text-black hover:bg-zinc-500 hover:text-white"
           >
             {isExpanded ? (
               <svg
