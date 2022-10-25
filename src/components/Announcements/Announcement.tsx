@@ -7,14 +7,22 @@ momentHijri.locale("en");
  * We are defaulting the localizer here because we are using this same
  * example on the main 'About' page in Storybook
  */
-export const Event = ({ title, desc }: { title: string; desc: string[] }) => {
+export const Announcement = ({
+  title,
+  desc,
+  image,
+}: {
+  title: string;
+  desc: string[];
+  image: string;
+}) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="card-compact card w-full rounded-md bg-slate-900 text-white shadow-xl">
-      <div className="card-body flex flex-col content-center justify-center">
+    <div className="card card-compact w-full rounded-md bg-zinc-600 text-white shadow-xl">
+      <div className="card-body flex flex-col content-center justify-center gap-4">
         <div className="flex flex-row items-center justify-between">
-          <p className="text-xl font-semibold">{title}</p>
+          <p className="card-title text-xl">{title}</p>
           <button
             onClick={() => {
               setIsExpanded(!isExpanded);
@@ -54,11 +62,13 @@ export const Event = ({ title, desc }: { title: string; desc: string[] }) => {
             )}
           </button>
         </div>
-        <p>Thursday, Oct 27th @ 7:15 PM</p>
 
-        <div className="card-actions justify-end">
-          {isExpanded && <p>{desc[0]}</p>}
-        </div>
+        {isExpanded && (
+          <div className="flex flex-col gap-4">
+            <img src={image} alt="Announcement" />
+            <p>{desc[0]}</p>
+          </div>
+        )}
       </div>
     </div>
   );

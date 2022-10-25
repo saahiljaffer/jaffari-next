@@ -50,7 +50,7 @@ momentHijri.locale("en");
 
 function Agenda() {
   return (
-    <div className="flex w-full flex-col place-items-center justify-center p-4 py-10">
+    <div className="flex w-full flex-col place-items-center justify-center gap-8 p-4 py-10">
       <h2 className="mb-2 max-w-2xl font-semibold text-black">
         Upcoming Events
       </h2>
@@ -59,6 +59,9 @@ function Agenda() {
           <Event key={event.id} title={event.title} desc={event.desc} />
         ))}
       </div>
+      <button className="btn w-full bg-slate-900 text-white">
+        Full Calendar
+      </button>
     </div>
   );
 }

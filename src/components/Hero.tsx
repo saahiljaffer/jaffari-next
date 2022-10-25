@@ -7,7 +7,7 @@ export const Hero = () => {
         <img
           alt="Jaffari Community Centre"
           src="/assets/images/jcc.jpg"
-          className="w-full max-w-sm rounded-lg shadow-2xl"
+          className="w-full max-w-sm rounded-md shadow-2xl"
         />
         <div>
           <h1 className="text-3xl font-bold">Jaffari Community Centre</h1>
@@ -16,11 +16,18 @@ export const Hero = () => {
             Community Centre is a 100,000 square foot facility that is home to a
             variety of community programs and services.
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-col justify-center gap-4">
             <Link href="/donate">
               <div className="btn bg-slate-900 text-white">Donate Now</div>
             </Link>
-            <a className="btn-outline btn border-white text-white">Visit JCC</a>
+            <div className="grid grid-cols-2 gap-4">
+              <a className="btn-outline btn border-white text-white">
+                Visit JCC
+              </a>
+              <a className="btn-outline btn border-white text-white">
+                Committees
+              </a>
+            </div>
           </div>
         </div>
       </div>

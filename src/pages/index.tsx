@@ -15,6 +15,31 @@ const Index = () => {
         <Hero />
         <PrayerBar />
         <Agenda />
+        <div className="flex w-full justify-center bg-slate-900 px-4 py-8">
+          <div className="flex w-full max-w-2xl flex-col gap-2">
+            <div className="card-compact card rounded-md bg-white text-black">
+              <div className="card-body flex flex-col items-start gap-0">
+                <p className="font-semibold uppercase">
+                  Pleace recite Surah Al-Fateha for
+                </p>
+                <p className="">Marhūm Husein Mohamedtaki Shermohamed</p>
+
+                <span className="mt-2 text-xs uppercase text-zinc-500">
+                  Sponsored
+                </span>
+              </div>
+            </div>
+            <button className="btn bg-white text-black hover:bg-zinc-600">
+              Engagements
+            </button>
+            <button className="btn bg-white text-black hover:bg-zinc-600">
+              Dua Shifa Requests
+            </button>
+            <button className="btn bg-white text-black hover:bg-zinc-600">
+              Obituaries
+            </button>
+          </div>
+        </div>
         <Announcements />
         <Footer />
       </div>
