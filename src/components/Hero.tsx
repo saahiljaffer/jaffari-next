@@ -20,9 +20,7 @@ export const Hero = () => {
             <Link href="/donate">
               <div className="btn bg-slate-900 text-white">Donate Now</div>
             </Link>
-            <a className="btn border-white bg-white text-slate-900">
-              Visit Our Centre
-            </a>
+            <a className="btn-outline btn border-white text-white">Visit JCC</a>
           </div>
         </div>
       </div>
