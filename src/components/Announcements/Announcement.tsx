@@ -27,7 +27,7 @@ export const Announcement = ({
             onClick={() => {
               setIsExpanded(!isExpanded);
             }}
-            className="btn h-8 min-h-0 w-8  bg-white px-0 text-black hover:bg-zinc-500 hover:text-white"
+            className="btn h-8 min-h-0 w-8  bg-white px-0 text-black hover:bg-slate-900 hover:text-white"
           >
             {isExpanded ? (
               <svg

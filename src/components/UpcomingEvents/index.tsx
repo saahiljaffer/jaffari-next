@@ -59,7 +59,7 @@ function Agenda() {
           <Event key={event.id} title={event.title} desc={event.desc} />
         ))}
       </div>
-      <button className="btn w-full bg-slate-900 text-white">
+      <button className="btn w-full bg-zinc-600 text-white">
         Full Calendar
       </button>
     </div>
