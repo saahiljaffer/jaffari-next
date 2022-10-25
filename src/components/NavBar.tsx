@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const NavBar = () => (
-  <div className="navbar bg-slate-900 px-4">
+  <div className="navbar fixed top-0 z-50 bg-slate-900 px-4 text-white">
     <div className="navbar-start">
       <Link
         href="/"

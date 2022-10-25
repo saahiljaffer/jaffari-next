@@ -9,15 +9,15 @@ import { Agenda } from "@/components/UpcomingEvents";
 const Index = () => {
   return (
     <div className="bg-white">
-      <div className="flex min-h-screen flex-col">
-        <NavBar />
+      <NavBar />
+      <div className="relative mt-16">
         <DonateBar />
         <Hero />
         <PrayerBar />
+        <Agenda />
+        <Announcements />
+        <Footer />
       </div>
-      <Agenda />
-      <Announcements />
-      <Footer />
     </div>
   );
 };
