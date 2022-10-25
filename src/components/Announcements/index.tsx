@@ -1,3 +1,5 @@
+import { Button } from "react-daisyui";
+
 import { Announcement } from "./Announcement";
 
 export const Announcements = () => {
@@ -35,7 +37,7 @@ export const Announcements = () => {
 
   return (
     <div className="flex flex-col place-items-center gap-8 bg-white py-10 px-4">
-      <h2 className="text-center font-semibold text-black">Announcements</h2>
+      <h2 className="text-center font-semibold">Announcements</h2>
       <div className="flex w-full flex-col content-center justify-center gap-2">
         {images.map((announcement, index) => (
           <Announcement
@@ -46,9 +48,9 @@ export const Announcements = () => {
           />
         ))}
       </div>
-      <button className="btn w-full bg-slate-900 text-white hover:bg-zinc-600 hover:text-white">
+      <Button color="primary" fullWidth>
         Older Announcements
-      </button>
+      </Button>
     </div>
   );
 };

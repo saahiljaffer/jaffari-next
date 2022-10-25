@@ -1,4 +1,5 @@
 import momentHijri from "moment-hijri";
+import { Button } from "react-daisyui";
 
 import { Event } from "./Event";
 
@@ -51,17 +52,15 @@ momentHijri.locale("en");
 function UpcomingEvents() {
   return (
     <div className="flex w-full flex-col place-items-center justify-center gap-8 p-4 py-10">
-      <h2 className="mb-2 max-w-2xl font-semibold text-black">
-        Upcoming Events
-      </h2>
-      <div className="flex w-full max-w-2xl flex-col content-center justify-center gap-2 text-black">
+      <h2 className="mb-2 max-w-2xl font-semibold">Upcoming Events</h2>
+      <div className="flex w-full max-w-2xl flex-col content-center justify-center gap-2">
         {events.map((event) => (
           <Event key={event.id} title={event.title} desc={event.desc} />
         ))}
       </div>
-      <button className="btn w-full bg-slate-900 text-white hover:bg-zinc-600 hover:text-white">
+      <Button color="primary" fullWidth>
         Full Calendar
-      </button>
+      </Button>
     </div>
   );
 }

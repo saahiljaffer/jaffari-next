@@ -1,8 +1,8 @@
 import { Announcements } from "@/components/Announcements";
 import { DonateBar } from "@/components/DonateBar";
-import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/Hero";
-import { NavBar } from "@/components/NavBar";
+import { MyFooter } from "@/components/Footer";
+import { MyHero } from "@/components/Hero";
+import { MyNavBar } from "@/components/NavBar";
 import { PrayerBar } from "@/components/PrayerBar";
 import { UpcomingEvents } from "@/components/UpcomingEvents";
 
@@ -10,14 +10,14 @@ const Index = () => {
   return (
     <div className="bg-white">
       <div className="flex min-h-screen flex-col">
-        <NavBar />
+        <MyNavBar />
         <DonateBar />
-        <Hero />
+        <MyHero />
         <PrayerBar />
       </div>
       <UpcomingEvents />
       <Announcements />
-      <Footer />
+      <MyFooter />
     </div>
   );
 };

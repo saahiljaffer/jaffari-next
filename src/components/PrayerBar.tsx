@@ -1,3 +1,5 @@
+import { Button } from "react-daisyui";
+
 export const PrayerBar = () => {
   const prayers = [
     { name: "fajr", time: "6:14AM" },
@@ -6,7 +8,7 @@ export const PrayerBar = () => {
     { name: "maghrib", time: "6:40PM" },
   ];
   return (
-    <div className="flex flex-col place-items-center justify-center gap-2 bg-white py-6 text-black">
+    <div className="flex flex-col place-items-center justify-center gap-2 bg-white py-6">
       <p className="font-semibold">24th Rabi Al Awwal 1444</p>
       <div className="mb-2 grid max-w-md grid-cols-4 gap-8">
         {prayers.map((prayer) => (
@@ -17,25 +19,24 @@ export const PrayerBar = () => {
         ))}
       </div>
       {/* The button to open modal */}
-      <label
-        htmlFor="my-modal-3"
-        className="btn-outline btn flex gap-1 border-slate-900 text-black hover:bg-slate-900 hover:text-white"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="h-6 w-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
-          />
-        </svg>
-        <p>Jamaat Salaat at JCC</p>
+      <label htmlFor="my-modal-3">
+        <Button variant="outline" className="flex gap-1">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="h-6 w-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+            />
+          </svg>
+          <p>Jamaat Salaat at JCC</p>
+        </Button>
       </label>
 
       {/* Put this part before </body> tag */}
@@ -44,7 +45,7 @@ export const PrayerBar = () => {
         <div className="modal-box relative bg-white">
           <label
             htmlFor="my-modal-3"
-            className="btn-sm btn-circle btn absolute right-2 top-2 bg-slate-900 text-white"
+            className="btn-sm btn-circle btn absolute right-2 top-2 bg-slate-900"
           >
             ✕
           </label>

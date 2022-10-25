@@ -9,11 +9,9 @@ export const Engagements = () => {
   ];
 
   return (
-    <div className="flex w-full content-center justify-center gap-1 bg-[#2a303c] p-4 py-10 text-white">
+    <div className="flex w-full content-center justify-center gap-1 bg-[#2a303c] p-4 py-10">
       <div className="flex w-full max-w-2xl flex-col gap-2">
-        <h2 className="mb-2 text-center font-semibold text-white">
-          Engagements
-        </h2>
+        <h2 className="mb-2 text-center font-semibold">Engagements</h2>
         {engagements.map((engagement) => (
           <Engagement key={engagement} names={engagement} />
         ))}

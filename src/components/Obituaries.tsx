@@ -7,11 +7,9 @@ export const Obituaries = () => {
   ];
 
   return (
-    <div className="flex w-full content-center justify-center gap-1 p-4 py-10 text-white">
+    <div className="flex w-full content-center justify-center gap-1 p-4 py-10">
       <div className="flex w-full max-w-2xl flex-col gap-2">
-        <h2 className="mb-2 text-center font-semibold text-black">
-          Obituaries
-        </h2>
+        <h2 className="mb-2 text-center font-semibold">Obituaries</h2>
         {obituaries.map((obituary) => (
           <div key={obituary} className="w-full rounded-lg bg-slate-900 p-3 ">
             {obituary}

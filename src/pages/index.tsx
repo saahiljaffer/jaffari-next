@@ -1,27 +1,29 @@
+import { Button } from "react-daisyui";
+
 import { Announcements } from "@/components/Announcements";
 import { DonateBar } from "@/components/DonateBar";
-import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/Hero";
-import { NavBar } from "@/components/NavBar";
+import { MyFooter } from "@/components/Footer";
+import { MyHero } from "@/components/Hero";
+import { MyNavBar } from "@/components/NavBar";
 import { PrayerBar } from "@/components/PrayerBar";
 import { UpcomingEvents } from "@/components/UpcomingEvents";
 
 const Index = () => {
   return (
     <div className="bg-white">
-      <NavBar />
+      <MyNavBar />
       <div className="relative mt-16">
-        <div className="flex flex-col gap-2 bg-yellow-400 p-4 text-center font-semibold text-black">
+        <div className="flex flex-col gap-2 bg-yellow-400 p-4 text-center font-semibold">
           <p>Lunar Eclipse on May 14th, 2022</p>
           <p>Important Announcement for the GTA & Surrounding Areas</p>
         </div>
         <PrayerBar />
-        <Hero />
+        <MyHero />
         <DonateBar />
         <UpcomingEvents />
         <div className="flex w-full justify-center bg-zinc-600 px-4 py-10">
           <div className="flex w-full max-w-2xl flex-col gap-2">
-            <div className="card-compact card rounded-md bg-white text-black">
+            <div className="card-compact card rounded-md bg-white">
               <div className="card-body flex flex-col items-start gap-0">
                 <p className="font-semibold uppercase">
                   Pleace recite Surah Al-Fateha for
@@ -33,19 +35,13 @@ const Index = () => {
                 </span>
               </div>
             </div>
-            <button className="btn bg-white text-black hover:bg-slate-900 hover:text-white">
-              Engagements
-            </button>
-            <button className="btn bg-white text-black hover:bg-slate-900 hover:text-white">
-              Dua Shifa Requests
-            </button>
-            <button className="btn bg-white text-black hover:bg-slate-900 hover:text-white">
-              Obituaries
-            </button>
+            <Button color="accent">Engagements</Button>
+            <Button color="accent">Dua Shifa Requests</Button>
+            <Button color="accent">Obituaries</Button>
           </div>
         </div>
         <Announcements />
-        <Footer />
+        <MyFooter />
       </div>
     </div>
   );

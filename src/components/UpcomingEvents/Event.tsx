@@ -1,5 +1,6 @@
 import momentHijri from "moment-hijri";
 import { useState } from "react";
+import { Button } from "react-daisyui";
 
 momentHijri.locale("en");
 
@@ -11,15 +12,17 @@ export const Event = ({ title, desc }: { title: string; desc: string[] }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="card-compact card w-full rounded-md bg-slate-900 text-white shadow-xl">
+    <div className="card-compact card w-full rounded-md bg-primary text-primary-content shadow-xl">
       <div className="card-body flex flex-col content-center justify-center">
         <div className="flex flex-row items-center justify-between">
           <p className="text-xl font-semibold">{title}</p>
-          <button
+          <Button
             onClick={() => {
               setIsExpanded(!isExpanded);
             }}
-            className="btn h-8 min-h-0 w-8  bg-white px-0 text-black hover:bg-zinc-500 hover:text-white"
+            color="accent"
+            shape="square"
+            size="sm"
           >
             {isExpanded ? (
               <svg
@@ -52,7 +55,7 @@ export const Event = ({ title, desc }: { title: string; desc: string[] }) => {
                 />
               </svg>
             )}
-          </button>
+          </Button>
         </div>
         <p>Thursday, Oct 27th @ 7:15 PM</p>
 

@@ -5732,6 +5732,11 @@ react-big-calendar@^1.5.0:
     react-overlays "^5.2.0"
     uncontrollable "^7.2.1"
 
+react-daisyui@^2.4.4:
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/react-daisyui/-/react-daisyui-2.4.4.tgz#8847249bfe16a7e886765dd952d5b42440812977"
+  integrity sha512-+UcgWZrCd+D8byEjV0qxbpxM0l3diH53BZhjvLiiBvO52A8AH2nEmM36j7XD7zhmX1W1ErIF41Dy5jJWLOhtJg==
+
 react-dom@^18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"

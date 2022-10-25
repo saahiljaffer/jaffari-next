@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { Button, Navbar } from "react-daisyui";
 
-export const NavBar = () => (
-  <div className="navbar fixed top-0 z-50 bg-slate-900 px-4 text-white">
-    <div className="navbar-start">
+export const MyNavBar = () => (
+  <Navbar className="fixed top-0 z-50 bg-primary px-4">
+    <Navbar.Start>
       <Link
         href="/"
         className="btn-ghost btn p-0 text-xl normal-case hover:cursor-pointer"
@@ -13,7 +14,7 @@ export const NavBar = () => (
           src="/assets/images/ISIJ-Logo-White.png"
         />
       </Link>
-    </div>
+    </Navbar.Start>
     <div className="navbar-center hidden lg:flex">
       <ul className="menu menu-horizontal p-0">
         <li>
@@ -57,26 +58,29 @@ export const NavBar = () => (
     </div>
     <div className="navbar-end">
       <li className="hidden lg:flex">
-        <a className="btn text-white">Watch Live</a>
+        <Button>Watch Live</Button>
       </li>
 
       <div className="dropdown-end dropdown">
-        <label tabIndex={0} className="btn-ghost btn px-1.5 lg:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h8m-8 6h16"
-            />
-          </svg>
+        <label tabIndex={0} className="lg:hidden">
+          <Button color="primary" size="sm" shape="square">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </Button>
         </label>
+
         <ul
           tabIndex={0}
           className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-white p-2 shadow"
@@ -119,10 +123,10 @@ export const NavBar = () => (
             </ul>
           </li>
           <li>
-            <a className="btn text-white">Watch Live</a>
+            <Button color="primary">Watch Live</Button>
           </li>
         </ul>
       </div>
     </div>
-  </div>
+  </Navbar>
 );
