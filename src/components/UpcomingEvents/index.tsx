@@ -51,16 +51,18 @@ momentHijri.locale("en");
 
 function UpcomingEvents() {
   return (
-    <div className="flex w-full flex-col place-items-center justify-center gap-8 p-4 py-10">
-      <h2 className="mb-2 max-w-2xl font-semibold">Upcoming Events</h2>
-      <div className="flex w-full max-w-2xl flex-col content-center justify-center gap-2">
-        {events.map((event) => (
-          <Event key={event.id} title={event.title} desc={event.desc} />
-        ))}
+    <div className="flex w-full justify-center">
+      <div className="flex w-full max-w-2xl flex-col place-items-center gap-8 bg-white py-10 px-4">
+        <h2 className="text-center font-semibold">Upcoming Events</h2>
+        <div className="flex w-full flex-col content-center justify-center gap-2">
+          {events.map((event) => (
+            <Event key={event.id} title={event.title} desc={event.desc} />
+          ))}
+        </div>
+        <Button color="primary" fullWidth>
+          Full Calendar
+        </Button>
       </div>
-      <Button color="primary" fullWidth>
-        Full Calendar
-      </Button>
     </div>
   );
 }

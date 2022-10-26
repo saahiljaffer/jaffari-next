@@ -36,21 +36,23 @@ export const Announcements = () => {
   ];
 
   return (
-    <div className="flex flex-col place-items-center gap-8 bg-white py-10 px-4">
-      <h2 className="text-center font-semibold">Announcements</h2>
-      <div className="flex w-full flex-col content-center justify-center gap-2">
-        {images.map((announcement, index) => (
-          <Announcement
-            title={announcement.title}
-            key={index}
-            image={announcement.src}
-            desc={announcement.description}
-          />
-        ))}
+    <div className="flex w-full justify-center">
+      <div className="flex w-full max-w-2xl flex-col place-items-center gap-8 bg-white py-10 px-4">
+        <h2 className="text-center font-semibold">Announcements</h2>
+        <div className="flex w-full flex-col content-center justify-center gap-2">
+          {images.map((announcement, index) => (
+            <Announcement
+              title={announcement.title}
+              key={index}
+              image={announcement.src}
+              desc={announcement.description}
+            />
+          ))}
+        </div>
+        <Button color="primary" fullWidth>
+          Older Announcements
+        </Button>
       </div>
-      <Button color="primary" fullWidth>
-        Older Announcements
-      </Button>
     </div>
   );
 };

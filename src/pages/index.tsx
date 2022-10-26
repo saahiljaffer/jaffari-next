@@ -1,5 +1,6 @@
 import { Button } from "react-daisyui";
 
+import { Advertisement } from "@/components/Advertisement";
 import { Announcements } from "@/components/Announcements";
 import { DonateBar } from "@/components/DonateBar";
 import { MyFooter } from "@/components/Footer";
@@ -20,26 +21,17 @@ const Index = () => {
         <PrayerBar />
         <MyHero />
         <DonateBar />
+
         <UpcomingEvents />
         <div className="flex w-full justify-center bg-zinc-600 px-4 py-10">
-          <div className="flex w-full max-w-2xl flex-col gap-2">
-            <div className="card-compact card rounded-md bg-white">
-              <div className="card-body flex flex-col items-start gap-0">
-                <p className="font-semibold uppercase">
-                  Pleace recite Surah Al-Fateha for
-                </p>
-                <p className="">Marhūm Husein Mohamedtaki Shermohamed</p>
-
-                <span className="mt-2 text-xs uppercase text-zinc-500">
-                  Sponsored
-                </span>
-              </div>
-            </div>
+          <div className="flex w-full max-w-2xl flex-col gap-2 px-4">
+            <Advertisement />
             <Button color="accent">Engagements</Button>
             <Button color="accent">Dua Shifa Requests</Button>
             <Button color="accent">Obituaries</Button>
           </div>
         </div>
+
         <Announcements />
         <MyFooter />
       </div>
