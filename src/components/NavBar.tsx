@@ -82,7 +82,7 @@ export const MyNavBar = () => (
     </div>
     <div className="navbar-end">
       <a className="btn-accent btn invisible lg:visible">Get started</a>
-      <div className="dropdown">
+      <div className="dropdown-end dropdown">
         <label tabIndex={0} className="btn-ghost btn lg:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -101,14 +101,14 @@ export const MyNavBar = () => (
         </label>
         <ul
           tabIndex={0}
-          className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow"
+          className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-primary p-2 shadow"
         >
           <li>
-            <a>Item 1</a>
+            <a>About</a>
           </li>
           <li tabIndex={0}>
             <a className="justify-between">
-              Parent
+              Forms
               <svg
                 className="fill-current"
                 xmlns="http://www.w3.org/2000/svg"
@@ -121,15 +121,33 @@ export const MyNavBar = () => (
             </a>
             <ul className="p-2">
               <li>
-                <a>Submenu 1</a>
+                <a>Advertising at our Centre</a>
               </li>
               <li>
-                <a>Submenu 2</a>
+                <a>Membership</a>
+              </li>
+              <li>
+                <a>Sura al-Fatiha</a>
+              </li>
+              <li>
+                <a>Isale Thawab</a>
+              </li>
+              <li>
+                <a>Dua Shifa-e-Mareez</a>
+              </li>
+              <li>
+                <a>Engagement</a>
               </li>
             </ul>
           </li>
           <li>
-            <a>Item 3</a>
+            <a>Members Portal</a>
+          </li>
+          <li>
+            <a>Donate</a>
+          </li>
+          <li>
+            <a>Watch Live</a>
           </li>
         </ul>
       </div>
