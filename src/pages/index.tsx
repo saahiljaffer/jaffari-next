@@ -28,7 +28,7 @@ const Index = () => {
 
         <UpcomingEvents />
         <div className="flex w-full justify-center bg-zinc-600 px-4 py-10">
-          <div className="flex w-full max-w-2xl flex-col gap-2 px-4">
+          <div className="flex w-full max-w-2xl flex-col gap-2">
             <Advertisement />
             <Button color="accent">Engagements</Button>
             <Button color="accent">Dua Shifa Requests</Button>
