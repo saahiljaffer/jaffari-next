@@ -8,7 +8,7 @@ export const MyHero = () => {
           <img
             alt="Jaffari Community Centre"
             src="/assets/images/jcc.jpg"
-            className="h-full max-w-sm rounded-md shadow-2xl"
+            className="w-full max-w-sm rounded-md shadow-2xl"
           />
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
