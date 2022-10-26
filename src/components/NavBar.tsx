@@ -3,7 +3,7 @@ import { Button } from "react-daisyui";
 export const MyNavBar = () => (
   <div className="navbar fixed top-0 z-10 bg-primary px-4 text-primary-content">
     <div className="navbar-start">
-      <Button size="md" shape="square" color="primary">
+      <Button size="md" shape="square" color="primary" href="/">
         <img
           className="btn-primary h-full w-full"
           alt=""
