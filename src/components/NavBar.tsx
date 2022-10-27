@@ -5,9 +5,10 @@ export const MyNavBar = () => (
     <div className="navbar-start">
       <Button size="md" shape="square" color="primary" href="/">
         <img
-          className="btn-primary h-full w-full"
+          src="/favicon.svg"
           alt=""
-          src="/assets/images/ISIJ-Logo-White.png"
+          className="fill-white stroke-white text-white"
+          color="#fff"
         />
       </Button>
     </div>

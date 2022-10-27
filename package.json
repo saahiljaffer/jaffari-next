@@ -19,6 +19,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@anatoliygatt/use-prefers-color-scheme": "^1.0.5",
     "daisyui": "^2.33.0",
     "moment": "^2.29.4",
     "moment-hijri": "^2.1.2",

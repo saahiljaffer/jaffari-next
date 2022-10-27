@@ -1,3 +1,4 @@
+import { usePrefersColorScheme } from "@anatoliygatt/use-prefers-color-scheme";
 import Head from "next/head";
 import { Button } from "react-daisyui";
 
@@ -11,9 +12,17 @@ import { PrayerBar } from "@/components/PrayerBar";
 import { UpcomingEvents } from "@/components/UpcomingEvents";
 
 const Index = () => {
+  const preferredColorScheme = usePrefersColorScheme();
+  const isDarkColorSchemePreferred = preferredColorScheme === "dark";
+
   return (
     <div>
       <Head>
+        {isDarkColorSchemePreferred ? (
+          <link rel="icon" href="favicon-white.svg" />
+        ) : (
+          <link rel="icon" href="favicon-blue.svg" />
+        )}
         <title>Islamic Shia Ithna-Asheri Jamaat of Toronto</title>
       </Head>
       <MyNavBar />

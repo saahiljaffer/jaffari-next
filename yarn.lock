@@ -15,6 +15,11 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
+"@anatoliygatt/use-prefers-color-scheme@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@anatoliygatt/use-prefers-color-scheme/-/use-prefers-color-scheme-1.0.5.tgz#a405529a1934bf9e9b4b96a16c0ac433a161b060"
+  integrity sha512-EbS5dHTLx96o3sWq058CJ2aG3sTpN/M3Q8st2mpBtzyDa3RyizWxdF2HlrwLDyjbaev9FrnK/6Rij3kjFMPN2g==
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.18.6":
   version "7.18.6"
   resolved "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.18.6.tgz"
