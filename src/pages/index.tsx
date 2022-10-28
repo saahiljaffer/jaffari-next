@@ -19,13 +19,41 @@ const Index = () => {
     <div>
       <Head>
         {isDarkColorSchemePreferred ? (
-          <link rel="icon" href="favicon-white.svg" />
+          <>
+            <link rel="icon" href="/whiteFavicon/favicon.svg" />
+            <link
+              rel="mask-icon"
+              href="/whiteFavicon/mask-icon.svg"
+              color="#ffffff"
+            />
+            <link
+              rel="apple-touch-icon"
+              href="/whiteFavicon/apple-touch-icon.png"
+            ></link>
+            <link rel="icon" href="/whiteFavicon/favicon.ico"></link>
+            <link rel="manifest" href="whiteFavicon/manifest.json" />
+          </>
         ) : (
-          <link rel="icon" href="favicon-blue.svg" />
+          <>
+            <link rel="icon" href="/blueFavicon/favicon.svg" />
+            <link
+              rel="mask-icon"
+              href="/blueFavicon/mask-icon.svg"
+              color="#ffffff"
+            />
+            <link
+              rel="apple-touch-icon"
+              href="/blueFavicon/apple-touch-icon.png"
+            ></link>
+            <link rel="icon" href="/blueFavicon/favicon.ico"></link>
+            <link rel="manifest" href="blueFavicon/manifest.json" />
+          </>
         )}
+        <link rel="icon" href="/favicon.ico"></link>
         <title>Islamic Shia Ithna-Asheri Jamaat of Toronto</title>
       </Head>
       <MyNavBar />
+
       <div className="relative mt-16">
         <div className="flex flex-col gap-2 bg-yellow-400 p-4 text-center font-semibold">
           <p>Lunar Eclipse on May 14th, 2022</p>

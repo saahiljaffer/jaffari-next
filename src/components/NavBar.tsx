@@ -5,7 +5,7 @@ export const MyNavBar = () => (
     <div className="navbar-start">
       <Button size="md" shape="square" color="primary" href="/">
         <img
-          src="/favicon.svg"
+          src="/logo-white.svg"
           alt=""
           className="fill-white stroke-white text-white"
           color="#fff"
