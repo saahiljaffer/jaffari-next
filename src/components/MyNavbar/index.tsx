@@ -1,4 +1,5 @@
 import { Bars3Icon } from "@heroicons/react/20/solid";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "react-daisyui";
 
@@ -8,7 +9,6 @@ export const MyNavbar = () => {
   const items = [
     {
       title: "About Us",
-
       items: [
         { title: "About Us", link: "/about-us" },
         { title: "Resident Alims", link: "/about-us/resident-alims" },
@@ -72,11 +72,13 @@ export const MyNavbar = () => {
       <div className="navbar z-20 max-w-7xl px-4 text-primary-content">
         <div className="navbar-start">
           <Button size="md" shape="square" color="primary" href="/">
-            <img
+            <Image
               src="/logo-white.svg"
               alt=""
               className="fill-white stroke-white text-white"
               color="#fff"
+              width={50}
+              height={50}
             />
           </Button>
         </div>
