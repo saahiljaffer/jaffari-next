@@ -1,19 +1,46 @@
 import { usePrefersColorScheme } from "@anatoliygatt/use-prefers-color-scheme";
 import Head from "next/head";
-import { Button } from "react-daisyui";
 
-import { Advertisement } from "@/components/Advertisement";
-import { Announcements } from "@/components/Announcements";
-import { DonateBar } from "@/components/DonateBar";
+import { AnnouncementLinks } from "@/components/AnnouncementLinks";
+import { CentreCard } from "@/components/CentreCard";
 import { MyFooter } from "@/components/Footer";
 import { MyHero } from "@/components/Hero";
 import { MyNavBar } from "@/components/NavBar";
-import { PrayerBar } from "@/components/PrayerBar";
-import { UpcomingEvents } from "@/components/UpcomingEvents";
 
 const Index = () => {
   const preferredColorScheme = usePrefersColorScheme();
   const isDarkColorSchemePreferred = preferredColorScheme === "dark";
+
+  const centres = [
+    {
+      name: "Jaffari Community Centre",
+      description:
+        "Situated on the border of Vaughan and Richmond Hill, the Jaffari Community Centre is a 100,000 square foot facility that is home to a variety of community programs and services.",
+      link: "/jcc",
+      image: "/assets/images/jcc.jpg",
+    },
+    {
+      name: "Masumeen Islamic Centre",
+      description:
+        "Located in the heart of Peel Region, the Masumeen Islamic Centre hosts religious, educational, cultural and social events for the community.",
+      link: "/mic",
+      image: "/assets/images/mic.png",
+    },
+    {
+      name: "Razavi Community Centre",
+      description:
+        "Located in the City of Hamilton, this centre is home to a variety of community programs and services.",
+      link: "/rcc",
+      image: "/assets/images/rcc.png",
+    },
+    {
+      name: "Zainabiya Islamic Centre",
+      description:
+        "Situated in the growing city of Barrie, this centre is home to a variety of community programs and services.",
+      link: "/zic",
+      image: "/assets/images/jcc.jpg",
+    },
+  ];
 
   return (
     <div>
@@ -55,25 +82,28 @@ const Index = () => {
       <MyNavBar />
 
       <div className="relative mt-16">
-        <div className="flex flex-col gap-2 bg-yellow-400 p-4 text-center font-semibold">
-          <p>Lunar Eclipse on May 14th, 2022</p>
-          <p>Important Announcement for the GTA & Surrounding Areas</p>
-        </div>
-        <PrayerBar />
-        <MyHero />
-        <DonateBar />
-
-        <UpcomingEvents />
-        <div className="flex w-full justify-center bg-zinc-600 py-10">
-          <div className="flex w-full max-w-2xl flex-col gap-2 px-4">
-            <Advertisement />
-            <Button color="accent">Engagements</Button>
-            <Button color="accent">Dua Shifa Requests</Button>
-            <Button color="accent">Obituaries</Button>
+        <MyHero
+          title="Islamic Shia Ithna-Asheri Jamaat of Toronto"
+          description="The ISIJ of Toronto is a charitable organization that serves the muslim community in the Greater Toronto Area through programs and services offered at 4 different centres. "
+          primaryButtonLink="/about"
+          primaryButtonText="Learn More"
+          secondaryButtonLink="/donate"
+          secondaryButtonText="Donate"
+        />
+        <div className="flex w-full justify-center">
+          <div className="max-w-5xl py-10 sm:grid sm:grid-cols-2">
+            {centres.map((centre) => (
+              <CentreCard
+                name={centre.name}
+                description={centre.description}
+                link={centre.link}
+                image={centre.image}
+                key={centre.name}
+              />
+            ))}
           </div>
         </div>
-
-        <Announcements />
+        <AnnouncementLinks size="5xl" />
         <MyFooter />
       </div>
     </div>

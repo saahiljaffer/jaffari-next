@@ -82,7 +82,9 @@ export const MyNavBar = () => (
       </ul>
     </div>
     <div className="navbar-end">
-      <a className="btn-accent btn invisible lg:visible">Get started</a>
+      <Button color="accent" href="/live" className="invisible lg:visible">
+        Watch Live
+      </Button>
       <div className="dropdown-end dropdown">
         <label tabIndex={0} className="btn-ghost btn lg:hidden">
           <svg

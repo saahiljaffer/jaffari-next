@@ -4,6 +4,7 @@ export const MyFooter = () => (
   <Footer center className="bg-primary p-10 text-primary-content">
     <div>
       <img src="/logo-white.svg" alt="logo" className="h-20" />
+
       <div className="gap-0">
         <p>9000 Bathurst Street</p>
         <p>Thornhill, Ontario</p>
