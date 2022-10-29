@@ -3,11 +3,6 @@ import { useState } from "react";
 import { Button } from "react-daisyui";
 
 momentHijri.locale("en");
-
-/**
- * We are defaulting the localizer here because we are using this same
- * example on the main 'About' page in Storybook
- */
 export const Announcement = ({
   title,
   desc,
@@ -21,7 +16,7 @@ export const Announcement = ({
 
   return (
     // eslint-disable-next-line prettier/prettier
-    <div className="card-compact card w-full rounded-md bg-primary text-primary-content shadow-xl">
+    <div className="card card-compact w-full rounded-md bg-primary text-primary-content shadow-xl">
       <div className="card-body flex flex-col content-center justify-center gap-4">
         <div className="flex flex-row items-center justify-between">
           <p className="card-title text-xl">{title}</p>

@@ -1,11 +1,5 @@
-import { MyNavBar } from "@/components/NavBar";
-
 const Index = () => {
-  return (
-    <div>
-      <MyNavBar />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Index;

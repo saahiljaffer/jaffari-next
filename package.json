@@ -19,7 +19,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@anatoliygatt/use-prefers-color-scheme": "^1.0.5",
+    "@heroicons/react": "^2.0.12",
     "daisyui": "^2.33.0",
     "moment": "^2.29.4",
     "moment-hijri": "^2.1.2",
@@ -29,7 +29,9 @@
     "react-big-calendar": "^1.5.0",
     "react-daisyui": "^2.4.4",
     "react-dom": "^18.2.0",
-    "swiper": "^8.4.4"
+    "react-use": "^17.4.0",
+    "swiper": "^8.4.4",
+    "tailwindcss": "^3.1.8"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
@@ -77,7 +79,6 @@
     "prettier-plugin-tailwindcss": "^0.1.13",
     "rimraf": "^3.0.2",
     "start-server-and-test": "^1.14.0",
-    "tailwindcss": "^3.1.8",
     "typescript": "^4.8.4"
   },
   "author": "Ixartz (https://github.com/ixartz)"

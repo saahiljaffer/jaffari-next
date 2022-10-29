@@ -7,8 +7,11 @@ export default function Document() {
     <Html lang={AppConfig.locale}>
       <Head></Head>
       <body>
-        <Main />
-        <NextScript />
+        {/* <MyNavbar /> */}
+        <div className="relative mt-16">
+          <Main />
+          <NextScript />
+        </div>
       </body>
     </Html>
   );

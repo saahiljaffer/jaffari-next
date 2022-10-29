@@ -1,8 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
 
-import { MyNavBar } from "@/components/NavBar";
-
 const Donate = () => {
   const funds = [
     "General",
@@ -26,7 +24,6 @@ const Donate = () => {
       <Head>
         <title>Donate Now | ISIJ of Toronto</title>
       </Head>
-      <MyNavBar />
       <div className="mt-16 flex flex-col place-content-center place-items-center content-center justify-center gap-2 py-4">
         <h1 className=" text-2xl font-semibold">Donate</h1>
         <div className="tabs">

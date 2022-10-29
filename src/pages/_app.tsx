@@ -1,13 +1,15 @@
 import "../styles/global.css";
 
-import { usePrefersColorScheme } from "@anatoliygatt/use-prefers-color-scheme";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Theme } from "react-daisyui";
+import { useMedia } from "react-use";
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  const preferredColorScheme = usePrefersColorScheme();
-  const isDarkColorSchemePreferred = preferredColorScheme === "dark";
+  const isDarkColorSchemePreferred = useMedia(
+    "(prefers-color-scheme: dark)",
+    false
+  );
   return (
     <>
       <Head>

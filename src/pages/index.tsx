@@ -1,16 +1,12 @@
-import { usePrefersColorScheme } from "@anatoliygatt/use-prefers-color-scheme";
 import Head from "next/head";
 
 import { AnnouncementLinks } from "@/components/AnnouncementLinks";
 import { CentreCard } from "@/components/CentreCard";
 import { MyFooter } from "@/components/Footer";
 import { MyHero } from "@/components/Hero";
-import { MyNavBar } from "@/components/NavBar";
+import { MyNavbar } from "@/components/MyNavbar";
 
 const Index = () => {
-  const preferredColorScheme = usePrefersColorScheme();
-  const isDarkColorSchemePreferred = preferredColorScheme === "dark";
-
   const centres = [
     {
       name: "Jaffari Community Centre",
@@ -45,67 +41,32 @@ const Index = () => {
   return (
     <div>
       <Head>
-        {isDarkColorSchemePreferred ? (
-          <>
-            <link rel="icon" href="/whiteFavicon/favicon.svg" />
-            <link
-              rel="mask-icon"
-              href="/whiteFavicon/mask-icon.svg"
-              color="#ffffff"
-            />
-            <link
-              rel="apple-touch-icon"
-              href="/whiteFavicon/apple-touch-icon.png"
-            ></link>
-            <link rel="icon" href="/whiteFavicon/favicon.ico"></link>
-            <link rel="manifest" href="whiteFavicon/manifest.json" />
-          </>
-        ) : (
-          <>
-            <link rel="icon" href="/blueFavicon/favicon.svg" />
-            <link
-              rel="mask-icon"
-              href="/blueFavicon/mask-icon.svg"
-              color="#ffffff"
-            />
-            <link
-              rel="apple-touch-icon"
-              href="/blueFavicon/apple-touch-icon.png"
-            ></link>
-            <link rel="icon" href="/blueFavicon/favicon.ico"></link>
-            <link rel="manifest" href="blueFavicon/manifest.json" />
-          </>
-        )}
-        <link rel="icon" href="/favicon.ico"></link>
         <title>Islamic Shia Ithna-Asheri Jamaat of Toronto</title>
       </Head>
-      <MyNavBar />
-
-      <div className="relative mt-16">
-        <MyHero
-          title="Islamic Shia Ithna-Asheri Jamaat of Toronto"
-          description="The ISIJ of Toronto is a charitable organization that serves the muslim community in the Greater Toronto Area through programs and services offered at 4 different centres. "
-          primaryButtonLink="/about"
-          primaryButtonText="Learn More"
-          secondaryButtonLink="/donate"
-          secondaryButtonText="Donate"
-        />
-        <div className="flex w-full justify-center">
-          <div className="max-w-5xl py-10 sm:grid sm:grid-cols-2">
-            {centres.map((centre) => (
-              <CentreCard
-                name={centre.name}
-                description={centre.description}
-                link={centre.link}
-                image={centre.image}
-                key={centre.name}
-              />
-            ))}
-          </div>
+      <MyNavbar />
+      <MyHero
+        title="Islamic Shia Ithna-Asheri Jamaat of Toronto"
+        description="The ISIJ of Toronto is a charitable organization that serves the muslim community in the Greater Toronto Area through programs and services offered at 4 different centres. "
+        primaryButtonLink="/about"
+        primaryButtonText="Learn More"
+        secondaryButtonLink="/donate"
+        secondaryButtonText="Donate"
+      />
+      <div className="flex w-full justify-center">
+        <div className="max-w-5xl py-10 sm:grid sm:grid-cols-2">
+          {centres.map((centre) => (
+            <CentreCard
+              name={centre.name}
+              description={centre.description}
+              link={centre.link}
+              image={centre.image}
+              key={centre.name}
+            />
+          ))}
         </div>
-        <AnnouncementLinks size="5xl" />
-        <MyFooter />
       </div>
+      <AnnouncementLinks size="5xl" />
+      <MyFooter />
     </div>
   );
 };
