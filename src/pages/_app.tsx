@@ -5,6 +5,9 @@ import Head from "next/head";
 import { Theme } from "react-daisyui";
 import { useMedia } from "react-use";
 
+import { MyFooter } from "@/components/Footer";
+import { MyNavbar } from "@/components/MyNavbar";
+
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const isDarkColorSchemePreferred = useMedia(
     "(prefers-color-scheme: dark)",
@@ -48,7 +51,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <title>Islamic Shia Ithna-Asheri Jamaat of Toronto</title>
       </Head>
       <Theme dataTheme="myTheme">
+        <MyNavbar />
         <Component {...pageProps} />
+        <MyFooter />
       </Theme>
     </>
   );

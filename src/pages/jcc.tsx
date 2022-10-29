@@ -3,9 +3,7 @@ import Head from "next/head";
 import { AnnouncementLinks } from "@/components/AnnouncementLinks";
 import { Announcements } from "@/components/Announcements";
 import { DonateBar } from "@/components/DonateBar";
-import { MyFooter } from "@/components/Footer";
 import { MyHero } from "@/components/Hero";
-import { MyNavbar } from "@/components/MyNavbar";
 import { PrayerBar } from "@/components/PrayerBar";
 import { UpcomingEvents } from "@/components/UpcomingEvents";
 
@@ -15,14 +13,13 @@ const Index = () => {
       <Head>
         <title>Islamic Shia Ithna-Asheri Jamaat of Toronto</title>
       </Head>
-      <MyNavbar />
       <MyHero
         title="Jaffari Community Centre"
         description="Situated on the border of Vaughan and Richmond Hill, the Jaffari
                 Community Centre is a 100,000 square foot facility that is home
                 to a variety of community programs and services."
         primaryButtonText="Our Committees"
-        primaryButtonLink="/jcc/committees"
+        primaryButtonLink="/about-us/committees"
         secondaryButtonText="Visit Our Centre"
         secondaryButtonLink="/jcc/services"
       />
@@ -31,7 +28,6 @@ const Index = () => {
       <PrayerBar />
       <Announcements />
       <AnnouncementLinks size="2xl" />
-      <MyFooter />
     </div>
   );
 };

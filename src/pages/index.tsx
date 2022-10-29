@@ -2,9 +2,7 @@ import Head from "next/head";
 
 import { AnnouncementLinks } from "@/components/AnnouncementLinks";
 import { CentreCard } from "@/components/CentreCard";
-import { MyFooter } from "@/components/Footer";
 import { MyHero } from "@/components/Hero";
-import { MyNavbar } from "@/components/MyNavbar";
 
 const Index = () => {
   const centres = [
@@ -43,11 +41,10 @@ const Index = () => {
       <Head>
         <title>Islamic Shia Ithna-Asheri Jamaat of Toronto</title>
       </Head>
-      <MyNavbar />
       <MyHero
         title="Islamic Shia Ithna-Asheri Jamaat of Toronto"
         description="The ISIJ of Toronto is a charitable organization that serves the muslim community in the Greater Toronto Area through programs and services offered at 4 different centres. "
-        primaryButtonLink="/about"
+        primaryButtonLink="/about-us"
         primaryButtonText="Learn More"
         secondaryButtonLink="/donate"
         secondaryButtonText="Donate"
@@ -66,7 +63,6 @@ const Index = () => {
         </div>
       </div>
       <AnnouncementLinks size="5xl" />
-      <MyFooter />
     </div>
   );
 };

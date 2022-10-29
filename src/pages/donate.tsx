@@ -1,8 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
 
-import { MyNavbar } from "@/components/MyNavbar";
-
 const Donate = () => {
   const funds = [
     "General",
@@ -26,7 +24,6 @@ const Donate = () => {
       <Head>
         <title>Donate Now | ISIJ of Toronto</title>
       </Head>
-      <MyNavbar />
       <div className="flex flex-col place-content-center place-items-center content-center justify-center gap-2 py-4">
         <h1 className=" text-2xl font-semibold">Donate</h1>
         <div className="tabs">
@@ -48,7 +45,7 @@ const Donate = () => {
         </div>
         {donations.map((donation, x) => (
           <div
-            key={index}
+            key={x}
             className="form-control flex w-full max-w-xs flex-col gap-2 py-2"
           >
             <div>
