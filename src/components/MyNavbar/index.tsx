@@ -52,7 +52,7 @@ export const MyNavbar = () => {
         },
       ],
     },
-    { title: "Members", link: "/members" },
+    { title: "Members", link: "https://portal.jaffari.org" },
   ];
   return (
     <div className="navbar fixed top-0 z-10 bg-primary px-4 text-primary-content">

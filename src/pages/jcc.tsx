@@ -5,6 +5,7 @@ import { Announcements } from "@/components/Announcements";
 import { DonateBar } from "@/components/DonateBar";
 import { MyFooter } from "@/components/Footer";
 import { MyHero } from "@/components/Hero";
+import { MyNavbar } from "@/components/MyNavbar";
 import { PrayerBar } from "@/components/PrayerBar";
 import { UpcomingEvents } from "@/components/UpcomingEvents";
 
@@ -14,6 +15,7 @@ const Index = () => {
       <Head>
         <title>Islamic Shia Ithna-Asheri Jamaat of Toronto</title>
       </Head>
+      <MyNavbar />
       <MyHero
         title="Jaffari Community Centre"
         description="Situated on the border of Vaughan and Richmond Hill, the Jaffari
