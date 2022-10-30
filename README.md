@@ -1,59 +1,13 @@
-# Boilerplate and Starter for Next JS 12+, Tailwind CSS 3 and TypeScript
+# [Website for ISIJ of Toronto](https://jaffari.saahiljaffer.com)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/231b1c79-fd1a-42f5-a30c-61fa9c0b0b33/deploy-status)](https://app.netlify.com/sites/serene-haupia-0ba2ee/deploys)
-
-🚀 Boilerplate and Starter for Next.js, Tailwind CSS and TypeScript ⚡️ Made with developer experience first: Next.js, TypeScript, ESLint, Prettier, Husky, Lint-Staged, Jest, Testing Library, Commitlint, VSCode, Netlify, PostCSS, Tailwind CSS.
-
-Clone this project and use it to create your own [Next.js](https://nextjs.org) project. You can check a [Next js templates demo](https://creativedesignsguru.com/demo/Nextjs-Boilerplate/).
 
 ### Features
 
 Developer experience first:
 
-- ⚡ [Next.js](https://nextjs.org) for Static Site Generator
-- 🔥 Type checking [TypeScript](https://www.typescriptlang.org)
-- 💎 Integrate with [Tailwind CSS](https://tailwindcss.com)
-- ✅ Strict Mode for TypeScript and React 18
-- 📏 Linter with [ESLint](https://eslint.org) (default NextJS, NextJS Core Web Vitals, Tailwind CSS and Airbnb configuration)
-- 💖 Code Formatter with [Prettier](https://prettier.io)
-- 🦊 Husky for Git Hooks
-- 🚫 Lint-staged for running linters on Git staged files
-- 🚓 Lint git commit with Commitlint
-- 🦺 Unit Testing with Jest and React Testing Library
-- 🧪 E2E Testing with Cypress
-- 💡 Absolute Imports using `@` prefix
-- 🗂 VSCode configuration: Debug, Settings, Tasks and extension for PostCSS, ESLint, Prettier, TypeScript, Jest
 - 🤖 SEO metadata, JSON-LD and Open Graph tags with Next SEO
 - ⚙️ [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
-- 🖱️ One click deployment with Vercel or Netlify (or manual deployment to any hosting services)
-- 🌈 Include a FREE minimalist theme
-- 💯 Maximize lighthouse score
-
-Built-in feature from Next.js:
-
-- ☕ Minify HTML & CSS
-- 💨 Live reload
-- ✅ Cache busting
-
-### Philosophy
-
-- Minimal code
-- SEO-friendly
-- 🚀 Production-ready
-
-### Nextless.js SaaS Boilerplate
-
-Build your SaaS product faster with [React SaaS Boilerplate](https://nextlessjs.com).
-
-[![React SaaS Boilerplate Next.js](https://creativedesignsguru.com/assets/images/themes/next-js-saas-starter-kit.jpg)](https://nextlessjs.com)
-
-### Premium Themes
-
-| [Green Nextjs Landing Page Template](https://creativedesignsguru.com/landing-green-modern-nextjs-theme/) | [Purple Saas Nextjs Theme](https://creativedesignsguru.com/landing-purple-modern-react-theme/) |
-| --- | --- |
-| [![Green Nextjs Landing Page Template](https://creativedesignsguru.com/assets/images/themes/landing-green-modern-nextjs-theme-xs.png)](https://creativedesignsguru.com/landing-green-modern-nextjs-theme/) | [![Blue Landing Page Nextjs Theme](https://creativedesignsguru.com/assets/images/themes/landing-blue-modern-nextjs-theme-xs.png)](https://creativedesignsguru.com/landing-blue-modern-react-theme/) |
-
-Find more [Nextjs Themes](https://creativedesignsguru.com/category/nextjs/).
 
 ### Requirements
 
@@ -64,15 +18,15 @@ Find more [Nextjs Themes](https://creativedesignsguru.com/category/nextjs/).
 Run the following command on your local environment:
 
 ```shell
-git clone --depth=1 https://github.com/ixartz/Next-js-Boilerplate.git my-project-name
-cd my-project-name
-npm install
+git clone
+cd isijoftoronto
+yarn
 ```
 
 Then, you can run locally in development mode with live reload:
 
 ```shell
-npm run dev
+yarn dev
 ```
 
 Open http://localhost:3000 with your favorite browser to see your project.
@@ -86,7 +40,7 @@ Open http://localhost:3000 with your favorite browser to see your project.
 ├── .vscode                         # VSCode configuration
 ├── public                          # Public assets folder
 ├── src
-│   ├── layouts                     # Layouts components
+│   ├── components                  # Components
 │   ├── pages                       # Next JS Pages
 │   ├── pages.test                  # Next JS Pages tests (this avoid test to treated as a Next.js pages)
 │   ├── styles                      # Styles folder
@@ -100,8 +54,6 @@ Open http://localhost:3000 with your favorite browser to see your project.
 
 You can easily configure Next js Boilerplate. Please change the following file:
 
-- `public/apple-touch-icon.png`, `public/favicon.ico`, `public/favicon-16x16.png` and `public/favicon-32x32.png`: your website favicon, you can generate from https://favicon.io/favicon-converter/
-- `src/styles/global.css`: your CSS file using Tailwind CSS
 - `src/utils/AppConfig.ts`: configuration file
 - `src/templates/Main.tsx`: default theme
 
@@ -110,8 +62,8 @@ You can easily configure Next js Boilerplate. Please change the following file:
 You can see the results locally in production mode with:
 
 ```shell
-$ npm run build
-$ npm run start
+$ yarn build
+$ yarn start
 ```
 
 The generated HTML and CSS files are minified (built-in feature from Next js). It will also removed unused CSS from [Tailwind CSS](https://tailwindcss.com).
@@ -119,7 +71,7 @@ The generated HTML and CSS files are minified (built-in feature from Next js). I
 You can create an optimized production build with:
 
 ```shell
-npm run build-prod
+yarn build-prod
 ```
 
 Now, your blog is ready to be deployed. All generated files are located at `out` folder, which you can deploy with any hosting service.
@@ -127,18 +79,6 @@ Now, your blog is ready to be deployed. All generated files are located at `out`
 ### Testing
 
 All tests are colocated with the source code inside the same directory. So, it makes it easier to find them. Unfortunately, it is not possible with the `pages` folder which is used by Next.js for routing. So, what is why we have a `pages.test` folder to write tests from files located in `pages` folder.
-
-### Deploy to Netlify
-
-Clone this repository on own GitHub account and deploy to Netlify:
-
-[![Netlify Deploy button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ixartz/Next-js-Boilerplate)
-
-### Deploy to Vercel
-
-Deploy this Next JS Boilerplate on Vercel in one click:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fixartz%2FNext-js-Boilerplate)
 
 ### VSCode information (optional)
 
@@ -159,7 +99,3 @@ Licensed under the MIT License, Copyright © 2022
 See [LICENSE](LICENSE) for more information.
 
 ---
-
-Made with ♥ by [CreativeDesignsGuru](https://creativedesignsguru.com) [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40Ixartz)](https://twitter.com/ixartz)
-
-[![React SaaS Boilerplate](https://creativedesignsguru.com/assets/images/themes/next-js-saas-starter-kit.jpg)](https://nextlessjs.com)
