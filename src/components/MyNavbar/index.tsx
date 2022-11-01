@@ -74,7 +74,7 @@ export const MyNavbar = () => {
           <Button size="md" shape="square" color="primary" href="/">
             <Image
               src="/logo-white.svg"
-              alt=""
+              alt="Home"
               className="fill-white stroke-white text-white"
               color="#fff"
               width={50}
