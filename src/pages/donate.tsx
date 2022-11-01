@@ -80,9 +80,7 @@ const Donate = () => {
                 )}
               </label>
               <select className="select-bordered select w-full border-slate-900 bg-white">
-                <option disabled selected>
-                  Pick one
-                </option>
+                <option disabled>Pick one</option>
                 {funds.map((fund, i) => (
                   <option key={i}>{fund}</option>
                 ))}

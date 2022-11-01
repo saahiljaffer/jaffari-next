@@ -7,7 +7,7 @@ import { MyHero } from "@/components/Hero";
 import { PrayerBar } from "@/components/PrayerBar";
 import { UpcomingEvents } from "@/components/UpcomingEvents";
 
-const Index = () => {
+const JCC = () => {
   return (
     <div>
       <Head>
@@ -32,4 +32,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default JCC;

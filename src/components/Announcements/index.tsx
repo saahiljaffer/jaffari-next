@@ -45,7 +45,7 @@ export const Announcements = () => {
               title={announcement.title}
               key={index}
               image={announcement.src}
-              desc={announcement.description}
+              description={announcement.description}
             />
           ))}
         </div>

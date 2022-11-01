@@ -56,7 +56,11 @@ function UpcomingEvents() {
         <h2 className="text-center font-semibold">Upcoming Events</h2>
         <div className="flex w-full flex-col content-center justify-center gap-2">
           {events.map((event) => (
-            <Event key={event.id} title={event.title} desc={event.desc} />
+            <Event
+              key={event.id}
+              title={event.title}
+              description={event.desc}
+            />
           ))}
         </div>
         <Button color="primary" fullWidth>

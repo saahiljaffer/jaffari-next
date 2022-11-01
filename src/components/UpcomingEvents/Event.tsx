@@ -8,7 +8,13 @@ momentHijri.locale("en");
  * We are defaulting the localizer here because we are using this same
  * example on the main 'About' page in Storybook
  */
-export const Event = ({ title, desc }: { title: string; desc: string[] }) => {
+export const Event = ({
+  title,
+  description,
+}: {
+  title: string;
+  description: string[];
+}) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -62,7 +68,7 @@ export const Event = ({ title, desc }: { title: string; desc: string[] }) => {
         <div className="card-actions">
           {isExpanded && (
             <div className="flex flex-col">
-              {desc.map((item, idx) => (
+              {description.map((item, idx) => (
                 <p key={idx}>{item}</p>
               ))}
             </div>

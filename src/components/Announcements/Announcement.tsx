@@ -5,11 +5,11 @@ import { Button } from "react-daisyui";
 momentHijri.locale("en");
 export const Announcement = ({
   title,
-  desc,
+  description,
   image,
 }: {
   title: string;
-  desc: string[];
+  description: string[];
   image: string;
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -65,7 +65,7 @@ export const Announcement = ({
         {isExpanded && (
           <div className="flex flex-col gap-4">
             <img src={image} alt="Announcement" />
-            <p>{desc[0]}</p>
+            <p>{description[0]}</p>
           </div>
         )}
       </div>
