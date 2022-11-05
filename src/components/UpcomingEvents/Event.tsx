@@ -1,8 +1,7 @@
-import momentHijri from "moment-hijri";
 import { useState } from "react";
 import { Button } from "react-daisyui";
 
-momentHijri.locale("en");
+// momentHijri.locale("en");
 
 /**
  * We are defaulting the localizer here because we are using this same

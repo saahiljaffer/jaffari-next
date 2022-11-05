@@ -5,3 +5,15 @@
 path {
   fill: #fff;
 }
+
+.rbc-event {
+  @apply bg-primary !important
+}
+
+.rbc-today {
+  @apply bg-primary/10 !important 
+}
+
+.h-almostScreen {
+height: calc(100vh - 64px)
+}

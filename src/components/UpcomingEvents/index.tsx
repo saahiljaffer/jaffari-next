@@ -1,4 +1,3 @@
-import momentHijri from "moment-hijri";
 import { Button } from "react-daisyui";
 
 import { Event } from "./Event";
@@ -47,7 +46,7 @@ const events = [
   },
 ];
 
-momentHijri.locale("en");
+// momentHijri.locale("en");
 
 function UpcomingEvents() {
   return (
@@ -63,7 +62,7 @@ function UpcomingEvents() {
             />
           ))}
         </div>
-        <Button color="primary" fullWidth>
+        <Button color="primary" fullWidth href="/jcc/events">
           Full Calendar
         </Button>
       </div>
