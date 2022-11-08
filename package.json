@@ -24,6 +24,7 @@
     "daisyui": "^2.33.0",
     "moment": "^2.29.4",
     "moment-hijri": "https://github.com/isijoftoronto/moment-hijri",
+    "moment-timezone": "^0.5.38",
     "next": "^13.0.0",
     "next-seo": "^5.5.0",
     "react": "^18.2.0",
