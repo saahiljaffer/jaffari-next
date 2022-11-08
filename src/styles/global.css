@@ -8,6 +8,7 @@ path {
 
 .rbc-event {
   @apply p-0 !important;
+  @apply bg-transparent !important;
 }
 
 .rbc-today {
