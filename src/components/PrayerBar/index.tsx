@@ -1,3 +1,4 @@
+import momentHijri from "moment-hijri";
 import { Button } from "react-daisyui";
 
 export const PrayerBar = () => {
@@ -11,7 +12,9 @@ export const PrayerBar = () => {
     <div className="flex w-full justify-center">
       <div className="flex w-full max-w-2xl justify-center px-4">
         <div className="flex w-full flex-col place-items-center justify-center gap-2 rounded-md bg-secondary py-6 text-white">
-          <p className="font-semibold">24th Rabi Al Awwal 1444</p>
+          <p className="font-semibold">
+            {momentHijri().locale("en-US").format("iDo iMMMM iYYYY ")}
+          </p>
           <div className="mb-2 grid max-w-md grid-cols-4 gap-8">
             {prayers.map((prayer) => (
               <div key={prayer.name} className="grid grid-rows-2">
