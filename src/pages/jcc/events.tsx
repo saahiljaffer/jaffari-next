@@ -68,15 +68,16 @@ const MyToolbar = ({
             <ChevronRightIcon className="h-8 w-8 text-black" />
           </Button>
         </div>
-        <Select>
+        <Select
+          onChange={(value) => {
+            onView(value as View);
+          }}
+        >
           {newViews.map((value) => (
             <Option
-              value={`${value}2`}
+              value={`${value}`}
               color={value === view ? "secondary" : "primary"}
               key={value}
-              onClick={() => {
-                onView(value as View);
-              }}
             >
               {value.toUpperCase()}
             </Option>
