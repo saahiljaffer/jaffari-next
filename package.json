@@ -23,6 +23,7 @@
     "daisyui": "^2.33.0",
     "moment": "^2.29.4",
     "moment-hijri": "^2.1.2",
+    "moment-timezone": "^0.5.38",
     "next": "^13.0.0",
     "next-seo": "^5.5.0",
     "react": "^18.2.0",
