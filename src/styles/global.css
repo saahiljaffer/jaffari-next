@@ -7,7 +7,7 @@ path {
 }
 
 .rbc-event {
-  @apply bg-primary !important
+  @apply p-0 !important;
 }
 
 .rbc-today {

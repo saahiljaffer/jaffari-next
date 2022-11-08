@@ -11,6 +11,8 @@ import { Button, Card, Select } from "react-daisyui";
 import * as ReactDOM from "react-dom";
 import { usePopper } from "react-popper";
 
+import { events } from "@/util/importantEvents";
+
 const { Option } = Select;
 
 const MyMonthDateHeader = ({ date }: { date: Date }) => {
@@ -89,7 +91,7 @@ const MyEvent = ({
   event,
   title,
 }: {
-  event: { desc: string[] };
+  event: { desc: string[]; category: string };
   title: string;
 }) => {
   const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(
@@ -115,16 +117,21 @@ const MyEvent = ({
 
   return (
     <>
-      <button
+      <Button
+        size="sm"
+        fullWidth={true}
         onClick={() => {
           setViewPopup(true);
         }}
-        type="button"
         ref={setReferenceElement}
-        className="z-10 w-full text-left"
+        className={`z-10 justify-start overflow-hidden text-ellipsis rounded-md py-0.5 px-[5px] text-left ${
+          event.category === "islamic"
+            ? "btn-primary"
+            : "btn-secondary text-white"
+        }`}
       >
-        {title}
-      </button>
+        <span className="overflow-hidden text-ellipsis text-left">{title}</span>
+      </Button>
 
       {viewPopup &&
         ReactDOM.createPortal(
@@ -132,7 +139,9 @@ const MyEvent = ({
             ref={setPopperElement}
             style={styles.popper}
             {...attributes.popper}
-            className="card-compact z-20 m-1 w-64 border-none bg-primary p-2 text-primary-content shadow"
+            className={`card-compact z-20 m-1 w-64 border-none p-2 text-primary-content shadow ${
+              event.category === "islamic" ? "bg-primary" : "bg-secondary"
+            }`}
           >
             <Card.Body>
               <Card.Title tag={"h3"}>{title}</Card.Title>
@@ -149,90 +158,6 @@ const MyEvent = ({
 
 const Events = () => {
   const [globalLocalizer, setGlobalLocalizer] = useState<DateLocalizer>();
-
-  const events = [
-    {
-      id: 0,
-      title: "Thursday Night",
-      start: new Date(2022, 10, 10, 19, 15, 0, 0),
-      end: new Date(2022, 10, 10, 22, 30, 0, 0),
-      desc: [
-        "7:15pm – Salat, Ziarat E Warith, Sura Yasin, Dua Kumail, Majlis by Syed Asad Jafry and Ziarat.",
-      ],
-      live: true,
-    },
-    {
-      id: 0,
-      title: "Thursday Night",
-      start: new Date(2022, 10, 10, 19, 15, 0, 0),
-      end: new Date(2022, 10, 10, 22, 30, 0, 0),
-      desc: [
-        "7:15pm – Salat, Ziarat E Warith, Sura Yasin, Dua Kumail, Majlis by Syed Asad Jafry and Ziarat.",
-      ],
-      live: true,
-    },
-    {
-      id: 0,
-      title: "Thursday Night",
-      start: new Date(2022, 10, 10, 19, 15, 0, 0),
-      end: new Date(2022, 10, 10, 22, 30, 0, 0),
-      desc: [
-        "7:15pm – Salat, Ziarat E Warith, Sura Yasin, Dua Kumail, Majlis by Syed Asad Jafry and Ziarat.",
-      ],
-      live: true,
-    },
-    {
-      id: 0,
-      title: "Thursday Night",
-      start: new Date(2022, 10, 10, 19, 15, 0, 0),
-      end: new Date(2022, 10, 10, 22, 30, 0, 0),
-      desc: [
-        "7:15pm – Salat, Ziarat E Warith, Sura Yasin, Dua Kumail, Majlis by Syed Asad Jafry and Ziarat.",
-      ],
-      live: true,
-    },
-    {
-      id: 0,
-      title: "Thursday Night",
-      start: new Date(2022, 10, 10, 19, 15, 0, 0),
-      end: new Date(2022, 10, 10, 22, 30, 0, 0),
-      desc: [
-        "7:15pm – Salat, Ziarat E Warith, Sura Yasin, Dua Kumail, Majlis by Syed Asad Jafry and Ziarat.",
-      ],
-      live: true,
-    },
-    {
-      id: 1,
-      title: "Jumuah",
-      start: new Date(2022, 10, 11, 12, 30, 0, 0),
-      end: new Date(2022, 10, 11, 14, 30, 0, 0),
-      desc: [
-        "12:30pm – Du’ā-e-Nudba.",
-        "1:02pm – Jumu’ah Salāt led by Maulana Sayyid Muhammad Rizvi,  followed by Friday Ziyārat.",
-      ],
-      live: true,
-    },
-    {
-      id: 2,
-      title: "Thursday Night",
-      start: new Date(2022, 10, 17, 19, 15, 0, 0),
-      end: new Date(2022, 10, 17, 22, 30, 0, 0),
-      desc: [
-        "7:15pm – Salat, Ziarat E Warith, Sura Yasin, Dua Kumail, Majlis by Syed Asad Jafry and Ziarat.",
-      ],
-      live: true,
-    },
-    {
-      id: 3,
-      title: "Wiladat of Imam Hassan Askari",
-      start: new Date(2022, 10, 18, 19, 15, 0, 0),
-      end: new Date(2022, 10, 18, 22, 30, 0, 0),
-      desc: [
-        "7:15pm – Salat, Ziarat E Warith, Sura Yasin, Dua Kumail, Majlis by Syed Asad Jafry and Ziarat.",
-      ],
-      live: true,
-    },
-  ];
 
   const components = useMemo(
     () => ({
@@ -375,6 +300,7 @@ const Events = () => {
               return <pre>{JSON.stringify(event)}</pre>;
             }}
             popup={true}
+            tooltipAccessor={() => ""}
           />
         )}
       </div>
