@@ -5,3 +5,35 @@
 path {
   fill: #fff;
 }
+
+.rbc-event {
+  @apply p-0 bg-transparent h-full w-full !important;
+}
+
+.rbc-today {
+  @apply bg-primary/10 h-full !important 
+}
+
+.h-almostScreen {
+height: calc(100vh - 64px)
+}
+
+.rbc-date-cell {
+  @apply pr-0 !important;
+}
+
+.rbc-row-segment {
+  @apply pr-0 !important;
+}
+
+/* .rbc-event-content {
+  @apply flex justify-center content-center !important;
+} */
+
+.rbc-off-range-bg {
+  @apply h-full !important;
+}
+
+.rbc-show-more {
+  @apply hidden md:block text-primary !important;
+}
