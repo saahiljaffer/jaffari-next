@@ -214,8 +214,10 @@ const Events = () => {
             setEventDisplay(date);
           }}
         >
-          <p>{label}</p>
-          <p>{momentHijri(date).locale("en-US").format("iDD")}</p>
+          <p className="w-full text-center">{label}</p>
+          <p className="w-full text-center">
+            {momentHijri(date).locale("en-US").format("iDD")}
+          </p>
         </button>
       </>
     );
