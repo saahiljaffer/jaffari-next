@@ -1,8 +1,5 @@
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/20/solid";
 import { useState } from "react";
-import { useMedia } from "react-use";
-
-const defaultTheme = require("tailwindcss/defaultTheme");
 
 export const NavbarItem = ({
   title,
@@ -14,12 +11,11 @@ export const NavbarItem = ({
   items?: { title: string; link: string }[];
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const isDesktop = useMedia(`(min-width: ${defaultTheme.screens.lg})`, false);
 
   if (items && items.length > 0) {
-    if (isDesktop) {
-      return (
-        <li tabIndex={0}>
+    return (
+      <>
+        <li tabIndex={0} className="hidden lg:block">
           <a>
             {title}
             <svg
@@ -41,11 +37,8 @@ export const NavbarItem = ({
             ))}
           </ul>
         </li>
-      );
-    }
-    return (
-      <>
-        <li>
+
+        <li className="lg:hidden">
           <button
             onClick={() => {
               if (items && items.length > 0) {

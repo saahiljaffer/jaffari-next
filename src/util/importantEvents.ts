@@ -15,6 +15,28 @@ const events = [
     category: "jcc",
   },
   {
+    id: 0,
+    title: "Thursday Night",
+    start: new Date(2022, 10, 10, 19, 15, 0, 0),
+    end: new Date(2022, 10, 10, 22, 30, 0, 0),
+    desc: [
+      "7:15pm – Salat, Ziarat E Warith, Sura Yasin, Dua Kumail, Majlis by Syed Asad Jafry and Ziarat.",
+    ],
+    live: true,
+    category: "jcc",
+  },
+  {
+    id: 0,
+    title: "Thursday Night",
+    start: new Date(2022, 10, 10, 19, 15, 0, 0),
+    end: new Date(2022, 10, 10, 22, 30, 0, 0),
+    desc: [
+      "7:15pm – Salat, Ziarat E Warith, Sura Yasin, Dua Kumail, Majlis by Syed Asad Jafry and Ziarat.",
+    ],
+    live: true,
+    category: "jcc",
+  },
+  {
     id: 1,
     title: "Jumuah",
     start: new Date(2022, 10, 11, 12, 30, 0, 0),
