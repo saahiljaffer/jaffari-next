@@ -145,7 +145,7 @@ const Events = () => {
           }}
           className="flex w-full justify-center md:hidden"
         >
-          <div className="mt-1.5 h-12 w-full bg-primary" />
+          <div className="h-12 w-full bg-primary" />
         </button>
 
         <div className="px-px">
